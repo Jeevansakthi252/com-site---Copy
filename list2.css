@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: rgb(65, 146, 218);
+}
+#listContainer{
+    text-align: center;
+    margin: auto;
+    /* background-color: orange; */
+    width: 80%;
+   
+}
+h2{
+    margin-top: 20px;
+}
+#employeeList{
+    margin: auto;
+   width: 90%;
+   height: 100vh;
+   /* background-color: rgb(214, 18, 18); */
+   position: relative;
+
+   margin-top: 50px;
+}
+
+.list{
+    width: 95%;
+    background-color: white;
+    height: 50px;
+    margin:10px;
+    position: relative;
+    border-radius: 20px;
+    
+}
+.listAlign{
+    position: absolute;
+    margin:15px auto auto 30px;
+}
+.mySpan{
+    justify-content: space-between;
+    margin-right: 80px;
+    height: 100vh;
+    /* background-color: blue; */
+    width: 100%;
+}
+span{
+    margin-top: 10px;
+}

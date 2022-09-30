@@ -1,0 +1,1276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+#dashboardMenuContainer{
+    /* background-color: rgb(86, 86, 219); */
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    display: none;
+    
+}
+.menuContainer{
+    float: left;
+    background-color: #FFFFFF;
+    width:20%;
+    height: 160vh;
+    text-align: center;
+}
+.logo img{
+    margin-top: 30px;
+    width: 70px;
+    height: 40px;
+}
+.logoName{
+    margin: 5px auto auto auto;
+}
+.menu{
+    margin-top:36px;
+    /* background-color: burlywood; */
+    width: 95%;
+    height: 100vh;
+    text-align: start;
+}
+#dashboardContainer{
+    margin-top: 15px;
+    /* background-color: rgb(104, 47, 151); */
+    width: 90%;
+    height: 48px;
+    display: flex;
+    cursor: pointer;
+    font-weight: 600;
+}
+/* .dashboardIcon{
+    width: 25%;
+    height:48px ;
+    background-color: beige;
+}
+#dashboard{
+    width: 75%;
+    height: 48px;
+    background-color: rgb(63, 15, 196);
+} 
+.dashboardIcon svg {
+    float: right;
+    margin-top: 12px;
+    margin-right: 2px;
+}
+#dashboard p:hover{
+    color:#3A36DB;
+} */
+/* #dashboard p{
+    color:gray;
+    margin-top: 15px;
+    float: left;
+    margin-left: 11px;
+    font-weight:90px;
+} */
+/* #dashboard p:after{
+    color:#024d34;
+    margin-top: 15px;
+    float: left;
+    margin-left: 11px;
+    opacity: 0.9;
+} */
+#dashboardContainer,#analyticsContainer,#invoiceContainer,.scheduleContainer,.calenderContainer,.messagesContainer,.notificationContainer,.settingsContainer{
+    margin-top: 15px;
+    /* background-color: rgb(104, 47, 151); */
+    width: 90%;
+    height: 48px;
+    display: flex;
+    cursor: pointer;
+    font-weight: 600;
+}
+.dashboardIcon,.analyticsIcon,.invoiceIcon,.scheduleIcon,.calenderIcon,.messagesIcon,.notificationIcon,.settingsIcon{
+    width: 25%;
+    height:48px ;
+    /* background-color: beige; */
+}
+#dashboard,#analytics,#invoice,.schedule,.calender,.messages,.notification,.settings{
+    width: 75%;
+    height: 48px;
+    /* background-color: rgb(63, 15, 196); */
+} 
+#dashboardContainer:hover,#analyticsContainer:hover,#invoiceContainer:hover,.scheduleContainer:hover,.calenderContainer:hover,.messagesContainer:hover,.notificationContainer:hover,.settingsContainer:hover{
+    background-image:linear-gradient(to right,rgb(101, 186, 212),white)
+   
+} 
+.dashboardIcon svg,.analyticsIcon svg,.invoiceIcon svg,.scheduleIcon svg,.calenderIcon svg,.messagesIcon svg,.notificationIcon svg,.settingsIcon svg{
+    float: right;
+    margin-top: 12px;
+    margin-right: 2px;
+    /* color: gray; */
+    opacity: 0.5;
+}
+#dashboard p,#analytics p,#schedule p,#calender p,#messages p,#notification p,#settings p{
+    /* color: gray; */
+    margin-top: 15px;
+    float: left;
+    margin-left: 11px;
+    /* opacity: 0.9; */
+    font-weight:60px;
+}
+#invoice p{
+    /* color: gray; */
+    margin-top: 11px;
+    float: left;
+    margin-left: 11px;
+    /* opacity: 0.9; */
+    font-weight: 80px;
+
+}
+#dashboard p:hover,#analytics p:hover,#invoice p:hover,#schedule p:hover,#calender p:hover,#messages p:hover,#notification p:hover,#settings p:hover{
+   color:#3A36DB
+}
+.coneDesign{
+    margin: 200px auto auto auto;
+    width: 300px;
+    height: 400px;
+}
+.coneDesign img{
+    height: 300px;
+    width: 90%;
+    margin-right: 20px;
+
+}
+.expContainer{
+    width: 80%;
+    background-color: beige;
+    float: left;
+    position: relative;
+}
+#dashboardExpContainer{
+    width: 120%;
+    background-color:#E5E5E5;
+    height: 180vh;
+    position: relative;
+    display: block;
+}
+#dashboardExpContainer h1{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#analyticsExpContainer{
+    width: 100%;
+    background-color:#E5E5E5;
+    height: 200vh;
+    position: relative;
+    display: none;
+}
+#analyticsExpContainer h1{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;     
+}
+#invoiceExpContainer{
+    width: 120%;
+    background-color:#E5E5E5;
+    height: 200vh;
+    position: relative;
+    display: none;
+}
+#invoiceExpContainer h1{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;     
+}
+#scheduleExpContainer{
+    width: 100%;
+    background-color:#E5E5E5;
+    height: 200vh;
+    position: relative;
+    display: none;
+}
+#scheduleExpContainer h1{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px; 
+}
+#calenderExpContainer{
+    width: 100%;
+    background-color:#E5E5E5;
+    height: 200vh;
+    position: relative;
+    display: none;
+}
+#calenderExpContainer h1{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px; 
+}
+#messagesExpContainer{
+    width: 100%;
+    background-color:#E5E5E5;
+    height: 200vh;
+    position: relative;
+    display: none;
+}
+#messagesExpContainer h1{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px; 
+}
+#notificationExpContainer{
+    width: 100%;
+    background-color:#E5E5E5;
+    height: 200vh;
+    position: relative;
+    display: none;
+}
+#notificationExpContainer h1{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px; 
+}
+#settingsExpContainer{
+    width: 100%;
+    background-color:#E5E5E5;
+    height: 200vh;
+    position: relative;
+    display: none;
+}
+#settingsExpContainer h1{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px; 
+}
+/* #invoiceExpContainer{
+    width: 100%;
+    height: 200vh;
+    background-color: orange;
+} */
+#header{
+    width: 100%;
+    height: 70px;
+    /* background-color: burlywood; */
+    position: relative;
+    /* display: inline-block; */
+    display: flex;
+    
+
+}
+#header h1{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.searchBox{
+    width: 30%;
+    height: 50px;
+    text-align: start;
+    margin-top: 10px;
+    margin-left: 700px;
+    font-size: medium;
+    justify-content: center;
+    /* background-color: #365592;   */
+    border: none; 
+    border-radius: 10px; 
+
+}
+.searchBox input{
+    background-color: #F1F4FA;;
+    width: 28%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    height: 50px;
+    border-radius: 10px;
+    font-size: medium;
+    position: absolute;
+
+}
+.searchBox input:hover{
+    outline: 2px solid rgb(36, 132, 196);
+}
+.searchBox ::placeholder {
+   
+    margin-bottom: 20px;
+}
+.searchBox span{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    margin-left: 300px;
+    margin-top: 5px;
+    margin-right: 8px;
+    border: none;
+    cursor:pointer;
+    position: absolute;
+}
+.searchBox svg{
+    /* color: rgb(216, 18, 133); */
+    /* display: inline-flex; */
+    position: absolute;
+}
+#header button{
+    width: 130px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: start;
+    color: #E5E5E5;
+    background-color: #3A36DB;
+
+}
+#header button span{
+    margin-left: 10px;
+    color: white;
+    font-size: 25px;
+}
+.tittleContainer{ 
+    width: 94%;
+    height: 50px;
+    /* background-color: aqua; */
+    position: relative;
+    margin: 20px auto auto auto;
+    border-radius: 10px;
+    display: flex;
+}
+
+#list{
+    border-radius: 10px;
+    width: 94%;
+    height: 70px;
+    background-color:#FFFFFF;
+    position: relative;
+    margin-top: 12px;
+    margin: 10px auto auto auto;
+    display: flex;
+    border-radius: 10px;
+}
+/* .listContainer2{
+    border-radius: 10px;
+    width: 90%;
+    height: 70px;
+    background-color:white;
+    position: relative;
+    margin-top: 12px;
+    margin: 10px auto auto auto;
+    display: flex;
+}
+.listContainer3{
+    border-radius: 10px;
+    width: 90%;
+    height: 70px;
+    background-color:white;
+    position: relative;
+    margin-top: 12px;
+    margin: 10px auto auto auto;
+    display: flex;
+}
+.listContainer4{
+    border-radius: 10px;
+    width: 90%;
+    height: 70px;
+    background-color:white;
+    position: relative;
+    margin-top: 12px;
+    margin: 10px auto auto auto;
+    display: flex;
+}
+.listContainer5{
+    border-radius: 10px;
+    width: 90%;
+    height: 70px;
+    background-color:white;
+    position: relative;
+    margin-top: 12px;
+    margin: 10px auto auto auto;
+    display: flex;
+} */
+#checkboxTittle{
+    width: 5%;
+    height: 50px;
+    text-align: center;
+}
+#checkboxTittle input{
+    width: 21px;
+    height: 21px;
+    margin-top:25px
+}
+.invoiceIdbutton{
+    float: left;
+    width: 10%;
+    height: 50px;
+    /* background-color: rgb(201, 199, 212); */
+    text-align: center;
+    
+}
+.namebutton{
+    float: left;
+    width: 10%;
+    height: 50px;
+    /* background-color: rgb(201, 199, 212); */
+    text-align: center;
+    
+}
+.emailbutton{
+    float: left;
+    width: 10%;
+    height: 50px;
+    /* background-color: rgb(201, 199, 212); */
+    text-align: center;
+    margin-left: 80px;
+    
+}
+.datebutton{
+    float: left;
+    width: 10%;
+    height: 50px;
+    /* background-color: rgb(201, 199, 212); */
+    text-align: center;
+    margin-left: 190px;
+    
+}
+.statusbutton{
+    float: left;
+    width: 10%;
+    height: 50px;
+    /* background-color: rgb(201, 199, 212); */
+    text-align: center;
+    margin-left: 90px;
+
+    
+}
+.deletebutton{
+    float: left;
+    width: 6%;
+    height: 50px;
+    /* background-color: rgb(201, 199, 212); */
+    text-align: center;
+    margin-left: 90px;
+    
+}
+#btn{
+    margin-top: 27px;
+    background: transparent;
+    border: none;
+}
+
+.checkbox{
+    width: 6%;
+    height: 70px;
+    /* background-color: blueviolet; */
+    text-align: center;
+
+}
+.checkbox input{
+    width: 21px;
+    height: 21px;
+    margin-top:25px
+}
+.invoiceId{
+    float: left;
+    width: 13%;
+    height: 70px;
+    /* background-color: aqua; */
+    text-align: start
+}
+.invoiceId p{
+    margin:25px auto auto 20px;
+    font-weight: 60px;
+}
+.name{
+    width: 22%;
+    height: 70px;
+    display: flex;
+}
+.email{
+    float: left;
+    width: 30%;
+    height: 70px;
+    /* background-color: rgb(22, 228, 84); */
+    display: flex;
+}
+.date{
+    float: left;
+    width: 17%;
+    height: 70px;
+    /* background-color: rgb(228, 22, 176); */
+    display: flex;
+}
+.status{
+    float: left;
+    width: 19%;
+    height: 70px;
+    /* background-color: rgb(22, 228, 49);   */
+    position: relative;
+    text-align: center;
+}
+
+.listAlign{
+    font-weight:bold;
+    margin-top: 25px;
+}
+.name img{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    margin-top: 15px;
+    margin-left: 8px;
+    float: left;
+}
+.name p{
+    margin-left: 20px;
+    margin-top: 25px;
+}
+.email svg{
+    margin-top: 28px;
+}
+.email p{
+    margin-top: 26px;
+    margin-left: 8px;
+}
+.date svg{
+    margin-top: 28px;
+}
+.date p{
+    margin-top: 27px;
+    margin-left: 8px;
+}
+.outerShape{
+    width: 80%;
+    height: 50px;
+    background-color: rgb(176, 232, 247);
+    margin: 9px auto auto 25px;
+    border-radius: 20px;
+    position: absolute;
+    
+}
+.outerShape p{
+    margin-top: 15px;
+    color: #3A36DB;
+}
+.outerShapePending{
+    width: 80%;
+    height: 50px;
+    background-color: rgb(215, 248, 206);
+    margin: 9px auto auto 25px;
+    border-radius: 20px;
+    position: absolute;
+}
+.outerShapePending p{
+    margin-top: 15px;
+    color: green;
+}
+.outerShapeCancel{
+    width: 80%;
+    height: 50px;
+    background-color: rgb(250, 183, 239);
+    margin: 9px auto auto 25px;
+    border-radius: 20px;
+    position: absolute;
+}
+.outerShapeCancel p{
+    margin-top: 15px;
+    color: red;
+}
+.star{
+    text-align: center;
+    float: left;
+    width: 5%;
+    height: 70px;
+    /* background-color: aquamarine; */
+}
+.star svg{
+    margin-top: 25px;
+}
+.listDots{
+    text-align: center;
+    width: 6%;
+    height: 70px;
+    /* background-color: aquamarine; */
+    text-align: center;
+     
+}
+#menuList {
+    margin-left: 5px;
+    width: 50px;
+    height: 30px;
+    /* background-color: rgb(40, 188, 199); */
+    margin-top: 25px;
+    cursor: pointer;
+}
+.listDots svg{
+    /* margin-top: 32px; */
+    
+}
+#fstEditAndDeleteContainer{
+    width: 100px;
+    height: 90px;
+    background-color: #F1F4FA;
+    position: absolute;
+    z-index: 1;
+    /* display: block; */
+    display: none;
+    right: 18px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+#invoiceEdit{
+    width: 85%;
+    height: 30px;
+    background-color:#d0d0f3;
+    border-radius:20px;
+    margin: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+}
+#invoiceEdit p{
+    font-size: smaller;
+    margin-top: 8px;
+    margin-left: 8px;
+    color: #3A36DB;
+}
+
+#invoiceDelete{
+    margin-top: 15px;
+    margin: 5px;
+    width: 85%;
+    height: 30px;
+    background-color:rgb(248, 201, 224);
+    border-radius:20px;
+    display: flex;
+}
+#invoiceDelete p{
+    font-size: smaller;
+    margin-top: 8px;
+    margin-left: 8px;
+    color: hotpink;
+}
+#sndEditAndDeleteContainer{
+    width: 100px;
+    height: 90px;
+    background-color: #F1F4FA;
+    position: absolute;
+    z-index: 1;
+    /* display: block; */
+    display: none;
+    right: 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+#thirdEditAndDeleteContainer{
+    width: 100px;
+    height: 90px;
+    background-color: #F1F4FA;
+    position: absolute;
+    z-index: 1;
+    /* display: block; */
+    display: none;
+    right: 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+#fourthEditAndDeleteContainer{
+    width: 100px;
+    height: 90px;
+    background-color: #F1F4FA;
+    position: absolute;
+    z-index: 1;
+    /* display: block; */
+    display: none;
+    right: 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+    
+
+#fifthEditAndDeleteContainer{
+    width: 100px;
+    height: 90px;
+    background-color: #F1F4FA;
+    position: absolute;
+    z-index: 1;
+    /* display: block; */
+    display: none;
+    right: 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.dashboardIcon svg{
+    /* filter: invert(19%) sepia(95%) saturate(2846%) hue-rotate(239deg) brightness(87%) contrast(100%); */
+}
+/* dashbord page */
+#dashboardExpContainer{
+    text-align: center;
+
+}
+.dashboardAlign{
+    margin-top: 15px;
+    width: 100%;
+    height: 600px;
+    /* background-color: cornsilk; */
+    display: block;
+    justify-content: center;
+}
+#dashboardHeading{
+    width: 100%;
+    height: 100px;
+}
+#dashboardHeading h1{
+    margin-top: 50px;
+}
+#listAndSearch{
+    position: relative;
+    width: 95%;
+    height: 50px;
+    /* background-color: chocolate; */
+    display: flex;
+    margin: auto;
+    
+}
+#threeList{
+    width: 25%;
+    height: 50px;
+    background-color:white;
+    display:flex;
+    text-align: center;
+    border-radius: 20px;
+}
+#listButton{
+    width: 30%;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius:20px ;
+    /* background-color: antiquewhite; */
+}
+#listButton:hover{
+    background-color: #3A36DB;
+    color: white;
+}
+#boardButton{
+    width: 30%;
+    height: 50px;
+    /* background-color: rgb(189, 115, 19); */
+}
+#boardButton:hover{
+    background-color: #3A36DB;
+    color: white;
+}
+#timelineButton{
+    width: 40%;
+    height: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius:20px ;
+    /* background-color: rgb(53, 189, 19); */
+}
+#timelineButton:hover{
+    background-color: #3A36DB;
+    color: white;
+}
+#threeList p{
+    margin-top: 14px;
+    font-weight: medium;
+}
+.dashboardSearchBox{
+    width: 20%;
+    height: 50px;
+    text-align: start;
+    /* margin-top: px; */
+    margin-left: 600px;
+    font-size: medium;
+    justify-content: center;
+    /* background-color: #365592;   */
+    border: none; 
+    border-radius: 10px; 
+    float: right;
+
+}
+.dashboardSearchBox input{
+    background-color: #F1F4FA;;
+    width: 25%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    height: 50px;
+    border-radius: 10px;
+    font-size: medium;
+    position: absolute;
+
+}
+.dashboardSearchBox input:hover{
+    outline: 2px solid rgb(36, 132, 196);
+}
+.dashboardSearchBox ::placeholder {
+   
+    margin-bottom: 20px;
+}
+.dashboardSearchBox span{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    margin-left:250px;
+    margin-top: 5px;
+    margin-right: 8px;
+    border: none;
+    cursor:pointer;
+    position: absolute;
+}
+.dashboardSearchBox svg{
+    /* color: rgb(216, 18, 133); */
+    /* display: inline-flex; */
+    position: absolute;
+}
+.companyDetials{ 
+    position: relative;
+    width: 95%;
+    height:116px;
+    /* background-color: burlywood; */
+    margin:30px auto 20px auto;
+    display: flex; 
+}
+.saveProducts{
+    width: 24%;
+    height:116px;
+    background-color: white; 
+    border-radius: 15px;
+    display: flex;
+}
+.stockProducts{
+    width: 24%;
+    height:116px;
+    background-color: white; 
+    border-radius: 15px;
+    margin-left: 20px;
+    display: flex;
+
+}
+.salesProducts{
+    width: 24%;
+    height:116px;
+    background-color: white; 
+    border-radius: 15px;
+    margin-left: 20px;
+    display: flex;
+
+}
+.jobApplication{
+    width: 24%;
+    height:116px;
+    background-color: white; 
+    border-radius: 15px;
+    margin-left: 20px;
+    display: flex;
+}
+
+.svgSpace{
+    width: 30%;
+    height:116px ;
+    /* background-color: bisque; */
+    position: relative;
+}
+.heartSvg{
+    background-color: bisque;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 26px;
+    margin-left: 15px;
+    position: absolute;
+}
+.gameSvg{
+    background-color: bisque;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 26px;
+    margin-left: 15px;
+    position: absolute;
+}
+.handbagSvg{
+    background-color: bisque;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 26px;
+    margin-left: 15px;
+    position: absolute;
+}
+.toolSvg{
+    background-color: bisque;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 26px;
+    margin-left: 15px;
+    position: absolute;
+}
+.companyDetials svg{
+    margin-top: 19px;
+}
+.textSpace{
+    width: 70%;
+    height: 116px;
+    /* background-color: #36b5db; */
+    text-align: start;
+}
+#productStock{
+    font-weight: bold;
+    font-size: 30px;
+    margin-top:25px;
+    color: black;
+    opacity: 0.6;
+}
+#storageDetials{
+    margin-top: 5px;
+    font-size: 20px;
+    color: black;
+    opacity: 0.6;
+
+}
+.todoContainer{
+    position: relative;
+    width: 95%;
+    height: 270px;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+}
+.todolableConatainer{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* background-color: bisque; */
+    margin-top: 33px;
+    align-items: baseline;
+}
+.todolableConatainer p{
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.todolableConatainer a{
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+.todoHeadingContainer{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    /* background-color: darksalmon; */
+}
+.todoHeadingContainer p{
+    padding-top: 7px;
+    font-size: medium;
+    margin-top: 8px;
+}
+.todoHeadingContainer button{
+    background: transparent;
+    border: none;
+}
+#checkBoxTittle{
+    width: 15%;
+    height: 50px;
+    /* background-color: rgb(25, 231, 238); */
+    text-align: start;
+}
+#checkBoxTittle button{
+    margin-top: 8px;
+    margin-left: 18px;
+}
+#taskNameTittle{
+    width: 22%;
+    height: 50px;
+    /* background-color: cadetblue; */
+    text-align: start;
+    margin-left: 10px;
+}
+#taskNameTittle button{
+    margin-top: 10px;
+    margin-left: 8px;
+    
+}
+#startDateTittle{
+    width: 17%;
+    height: 50px;
+    /* background-color: rgb(19, 23, 248); */
+    text-align: start;
+    margin-left: 8px;
+}
+#startDateTittle button{
+    margin-top: 10px;
+    margin-left: 28px;
+}
+#endDateTittle{
+    width: 18%;
+    height: 50px;
+    /* background-color: cadetblue; */
+    text-align: start;
+    margin-left: 10px;
+
+}
+#endDateTittle button{
+    margin-top: 10px;
+    margin-left: 32px;
+}
+#memberTittle{
+    width: 19%;
+    height: 50px;
+    /* background-color: cadetblue; */
+    text-align: start;
+    margin-left: 10px;
+}
+#memberTittle button{
+    margin-top: 10px;
+    margin-left: 32px;
+}
+#statusTittle{
+    width: 19%;
+    height: 50px;
+    /* background-color: cadetblue; */
+    text-align: start;
+    margin-left: 10px;
+    
+}
+#statusTittle button{
+    margin-top: 10px;
+    margin-left: 22px;
+}
+#actionsTittle{
+    width: 18%;
+    height: 50px;
+    /* background-color: cadetblue; */
+    text-align: start;
+    margin-left: 10px;
+}
+#actionsTittle button{
+    margin-top: 10px;
+    margin-left: 22px;
+}
+
+.todoListContainer{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    margin-top: 12px;
+    display: flex;
+}
+#listCheckBox{
+    width: 12%;
+    height: 50px;
+    /* background-color: #0bbb8f; */
+    text-align: start;
+}
+#listCheckBox input{
+    width: 20px;
+    height: 20px;
+    margin-left:20px ;
+    margin-top: 19px;
+    
+}
+#uiDesign{
+    width: 19%;
+    height: 50px;
+    /* background-color: #db36b7; */
+    margin-left: 5px;
+    display: flex;
+    text-align: start;
+}
+#todoLogo{
+    width:30%;
+    height: 50px;
+    /* background-color: #52db36; */
+}
+#todoLogo img{
+    margin-top: 16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    float: right;
+    margin-right: 10px;
+}
+#logotext{
+    width:70%;
+    height: 50px;
+    /* background-color: #db363e; */
+}
+#logotext p{
+    margin-top: 20px;
+    margin-left: 7px;
+}
+#startDateData{
+    width: 15%;
+    height: 50px;
+    /* background-color: #52db36; */
+    margin-left: 5px;
+    text-align: start;
+}
+#startDateData p{
+    margin-top: 19px;
+    margin-left: 25px;
+}
+#endDateData{
+    width: 15%;
+    height: 50px;
+    /* background-color: #db363e; */
+    margin-left: 5px;
+    text-align: start;
+}
+#endDateData p{
+    margin-top: 19px;
+    margin-left: 25px;
+}
+#member{
+    width: 15%;
+    height: 50px;
+    /* background-color: #dbbd36; */
+    margin-left: 5px;
+    text-align: start;
+}
+#member p{
+    margin-top: 19px;
+    margin-left: 25px;
+}
+#status{
+    width: 15%;
+    height: 50px;
+    /* background-color: #6836db; */
+    margin-left: 5px;
+    
+}
+#pendingLable{
+    position: relative;
+    width: 80%;
+    height: 40px;
+    background-color:blue;
+    margin-top: 5px;
+    margin-left: 14px;
+    border-radius: 20px;
+}
+#pendingLable p{
+    position: absolute;
+    margin-top: 12px;
+    color: white;
+    margin-left: 35px;
+
+}
+#action{
+    width: 15%;
+    height: 50px;
+    /* background-color: #36b5db; */
+    margin-left: 5px;
+    display: flex;
+}
+#edit{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #85bbe7;
+    margin-left: 20px;
+}
+#edit svg{
+    margin: 12px 16px auto auto;
+}
+#action svg{
+    float: right;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.analyticsAndProduct{
+    display: flex;
+}
+.analysticsContainer{
+    width: 33%;
+    height: 400px;
+    background-color: white;
+    margin-top: 30px;
+    margin-left: 40px;
+    border-radius: 10px;
+    
+}
+.analysticsTittle{
+    width: 100%;
+    height: 70px;
+    /* background-color: #36db75; */
+   
+    
+}
+.analysticsTittle p{
+    float: left;
+    font-weight: bolder;
+    font-size: larger;
+    margin-top: 30px;
+    margin-left: 20px;
+    opacity: 0.6;
+
+}
+.analysticsTittle svg{
+    float: right;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+.topSellingProduct{
+    width: 40%;
+    height: 400px;
+    background-color: white;
+    margin-top: 30px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+.topSellingProductTittle{
+    width: 100%;
+    height: 70px;
+    /* background-color: #36b5db; */
+}
+.topSellingProductTittle p{
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    font-weight: bolder;
+    font-size: larger;
+    opacity: 0.6;
+}
+.topSellingProductTittle svg{
+    float: right;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+.nikeContainer{
+    width: 95%;
+    margin: auto;
+    height: 150px;
+    /* background-color: #36b5db; */
+    display: flex;
+}
+.nikeImg{
+    width: 30%;
+    height: 150px;
+    /* background-color: #3A36DB; */
+}
+.iphoneContainer{
+    width: 95%;
+    margin: auto;
+    height: 150px;
+    /* background-color: #36b5db; */
+    margin-top: 10px;
+    display: flex;
+}
+.iphoneImg{
+    width: 30%;
+    height: 150px;
+    /* background-color: #3A36DB; */
+}
+.imgPrice{
+    width: 60%;
+    height: 150px;
+    text-align: start;
+    
+}
+#tittleName {
+    margin-top: 20px;
+}
+.imgPrice svg{
+    margin-top: 8px;
+}
+#price {
+  margin-top: 8px;  
+}

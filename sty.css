@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+}
+.i-first{
+    display: inline-flex;
+    position: relative;
+}
+.i-first i{
+    margin-top: 17px;
+    
+}
+.i-email{
+    display: inline-flex;
+    position: relative;
+}
+.i- i{
+    margin-top: 17px;
+
+}
+.i-first{
+    display: inline-flex;
+    position: relative;
+}
+.i-first i{
+    margin-top: 17px;
+
+}

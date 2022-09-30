@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    border: none;
+}
+#container{
+    height:100vh ;
+    width: 100%;
+    display: block;
+}
+#loginPageContainer{
+    width: 100%;
+    height: 690px;
+    background-color: blue;
+    display: flex;
+}
+
+.loginContainer{
+    float: left;
+    width: 35%;
+    background-color: #FFFFFF;
+    height: 690px;
+    position: relative;
+    text-align: center;
+    justify-content: center; 
+}
+.logo img{
+    margin-top: 30px;
+    width: 89px;
+    height: 50px;
+}
+.loginText{
+    width: 80% ;
+    margin: 20px auto auto auto;
+    height: 33px;
+}
+.log span{
+    height: 33px;
+    width: 73px; 
+}
+.socialLogin{
+    height: 50px;
+    width: 80%;
+    margin: 24px auto auto auto;
+    display: inline-block;
+}
+.google { 
+    background-color: #F1F4FA;
+    width: 164px;
+    height: 50px;
+    display: flex;
+    padding: 7px  40px;
+    border-radius: 10px;
+    font-weight: 600;
+    float: left;
+}
+.googleLogo img{
+    margin-top: 8px;
+    width:18px;
+    height: 18px; 
+    margin-left: 8px; 
+}
+.google p{
+    margin-top: 9px;
+    margin-left: 5px;
+    width: 54px;
+    height: 21px;  
+}
+.facebook {
+    background-color:#F1F4FA;
+    width: 164px;
+    height: 50px;
+    display: flex;
+    padding: 7px  40px;
+    border-radius: 10px;
+    font-weight: 600;
+    float: right;
+}
+.facebookLogo img{
+    margin-top: 4px;
+    width:23px;
+    height: 23px;  
+}
+.facebook p{
+    margin-top: 9px;
+    margin-left: px;
+    float: left;
+    width: 54px;
+    height: 21px;
+}
+.or{  
+    width: 80%;
+    /* background-color: aliceblue; */
+    margin: 25px auto auto auto;
+}
+.emailText{
+    text-align: start;
+    margin: 25px auto auto auto;
+    width: 80%;
+    font-weight: 600;
+}
+.emailLabelBox{
+    width: 80%;
+    height: 50px;
+    text-align: start;
+    margin: 9px auto auto auto;
+    font-size: medium;
+    justify-content: center;
+    background-color: #F1F4FA;  
+    border-radius: 10px; 
+    padding-bottom: 12px;
+}
+.emailLabelBox input{
+    background-color: #F1F4FA;;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    height: 50px;
+    font-size: medium;
+    border: 2px solid #F1F4FA;
+
+}
+input:hover {
+    outline: 2px solid rgb(36, 132, 196);    
+}
+#form span{
+    height: 15px;
+    width: 80%;
+    text-align: end;
+}
+#emailTextField{
+    font-size: small;
+    margin: 5px auto 5px 10px;
+}
+
+.passwordText{
+    text-align: start;
+    margin: 25px auto auto auto;
+    width: 80%;
+    font-weight: 600;
+}
+.passwordLabelBox{
+    width: 80%;
+    height: 50px;
+    text-align: start;
+    margin: 9px auto auto auto;
+    font-size: medium;
+    justify-content: center;
+    background-color: #F1F4FA;  
+    border: none; 
+    border-radius: 10px; 
+
+}
+.passwordLabelBox input{
+    background-color: #F1F4FA;;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    height: 50px;
+    /* position: absolute;    */
+    border-radius: 10px;
+    font-size: medium;
+    position: relative;
+}
+.passwordLabelBox input:hover{
+    outline: 2px solid rgb(36, 132, 196);
+}
+.passwordLabelBox ::placeholder {
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+.passwordLabelBox span{
+    width: 15%;
+    padding: 10px;
+    /* padding-right: 8px; */
+    margin-left: 68%;
+    margin-top: 8px;
+    /* padding-bottom: 23px; */
+    margin-right: 8px;
+    border: none;
+    position: absolute;
+    cursor:pointer;
+}
+.passwordLabelBox i{
+    color: gray;
+    position: absolute;
+    align-items: center;
+    display: inline-flex;
+}
+#passwordTextField{
+    position: absolute;
+    margin-top: 40px;
+    left: 40px;
+    display: inline-block;  
+    width: 100%; 
+}
+/* #hide1{
+    display: none;
+} */
+input{
+    border: none;
+}
+.rememberAndResetPasswordField{
+    width: 80%;
+    height: 40px;
+    margin: 19px auto auto auto;
+    display: flex;  
+    display: inline-block;
+}
+.rememberField{
+    height: 40px;
+    width: 50%;
+    float: left;
+    text-align: start;  
+}
+.checkboxAndRememberField{
+    margin-top: 10px;
+}
+
+#resetPasswordField {
+    height: 40px;
+    width: 50%;
+    float:right;
+    text-align: end;
+}
+.resetPassword {
+    margin-top: 10px;
+}
+.loginButton button{
+    margin: 25px auto auto auto;
+    width: 80%;
+    height: 50px;
+    background-color:#3A36DB;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.signupNavigatorContainer{
+    margin: 30px auto auto auto;
+    height: 21px;
+    width: 80%;
+}
+.signupNavigatorLabel a{
+    text-decoration: none;
+}
+.imgContainer{
+    float: left;
+    width: 65%;
+    height: 690px;
+    background-color: aqua;
+    text-align: center;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    background-color:#F1F4FA;
+}
+.img img{
+    margin: 7% auto auto auto;
+    height: 550px;
+    width: 650px;
+}
+
+/* signup page designs */
+
+#signupPageContainer{
+    width: 100%;
+    height: 870px;
+    background-color: blue;
+    display: flex;
+    /* display: none;  */
+}
+.signupcontainer{
+    float: left;
+    width: 35%;
+    background-color: #FFFFFF;
+    height: 870px;
+    position: relative;
+    text-align: center;
+    justify-content: center; 
+}
+.signupText{
+    width: 80% ;
+    margin: 20px auto auto auto;
+    height: 33px;
+}
+.signupText span{
+    height: 33px;
+    width: 73px; 
+}
+.firstName{
+        text-align: start;
+        margin: 25px auto auto auto;
+        width: 80%;
+        font-weight: 600;
+}
+.firstNameLable{
+    width: 80%;
+    height: 50px;
+    text-align: start;
+    margin: 9px auto auto auto;
+    font-size: medium;
+    justify-content: center;
+    background-color: #F1F4FA;  
+    border-radius: 10px; 
+    padding-bottom: 12px;
+}
+.firstNameLable input{
+    background-color: #F1F4FA;;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    height: 50px;
+    font-size: medium;
+    border: 2px solid #F1F4FA;
+
+}
+input:hover {
+    outline: 2px solid rgb(36, 132, 196);    
+}
+#form span{
+    height: 15px;
+    width: 80%;
+    text-align: end;
+}
+.emailText{
+    text-align: start;
+    margin: 25px auto auto auto;
+    width: 80%;
+    font-weight: 600;
+}
+.emailLabelBox{
+    width: 80%;
+    height: 50px;
+    text-align: start;
+    margin: 9px auto auto auto;
+    font-size: medium;
+    justify-content: center;
+    background-color: #F1F4FA;  
+    border-radius: 10px; 
+    padding-bottom: 12px;
+}
+.emailLabelBox input{
+    background-color: #F1F4FA;;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    height: 50px;
+    font-size: medium;
+    border: 2px solid #F1F4FA;
+}
+.emailLabelBox input:hover{
+    outline: 2px solid rgb(36, 132, 196);
+}
+.userName{
+    text-align: start;
+    margin: 25px auto auto auto;
+    width: 80%;
+    font-weight: 600;
+}
+.userInputBox{
+    width: 80%;
+    height: 50px;
+    text-align: start;
+    margin: 9px auto auto auto;
+    font-size: medium;
+    justify-content: center;
+    background-color: #F1F4FA;  
+    border-radius: 10px; 
+    padding-bottom: 12px;
+}
+.userInputBox input{
+    background-color: #F1F4FA;;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    height: 50px;
+    font-size: medium;
+    border: 2px solid #F1F4FA;
+}
+.passwordText{
+    text-align: start;
+    margin: 25px auto auto auto;
+    width: 80%;
+    font-weight: 600;
+}
+.passwordLabelBox{
+    width: 80%;
+    height: 50px;
+    text-align: start;
+    margin: 9px auto auto auto;
+    font-size: medium;
+    justify-content: center;
+    background-color: #F1F4FA;  
+    border: none; 
+    border-radius: 10px; 
+}
+
+.passwordLabelBox input{
+    background-color: #F1F4FA;;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    height: 50px;
+    position: absolute;   
+    border-radius: 10px;
+    font-size: medium;
+}
+.passwordLabelBox input:hover{
+    outline: 2px solid rgb(36, 132, 196);
+}
+.passwordLabelBox ::placeholder {
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+.passwordLabelBox span{
+    width: 15%;
+    padding: 10px;
+    /* padding-right: 8px; */
+    margin-left: 68%;
+    margin-top: 8px;
+    /* padding-bottom: 23px; */
+    margin-right: 8px;
+    border: none;
+    position: absolute;
+    cursor:pointer;
+}
+
+.passwordLabelBox i{
+    color: gray;
+    position: absolute;
+    align-items: center;
+    display: inline-flex;
+}
+#passTextFieldLable{
+    text-align: start;
+    width: 80%;
+    margin: auto;
+}
+#passwordTextField{
+    font-size: smaller;
+    margin-left: 10px;
+}
+
+.checkboxContainer{
+    width: 80%;
+    height: 40px;
+    margin: 19px auto auto auto;
+    display: flex;  
+    display: inline-block;
+    font-size: medium;
+    text-align: start;
+}
+.checkboxContainer span{
+    margin-left: 2px;
+    font-size: medium;
+    font-weight: 100px;
+    word-spacing: 1.5px;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+.checkboxContainer a{
+    text-decoration: none;
+}
+.createButton button{
+    margin: 25px auto auto auto;
+    width: 80%;
+    height: 50px;
+    background-color:#3A36DB;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.signinNavigatorContainer{
+    width: 80%;
+    margin: 15px auto auto auto;
+    
+}
+.signinNavigatorContainer a{
+   text-decoration: none;
+}
+.signupImgContainer{
+    float: left;
+    width: 65%;
+    height: 870px;
+    background-color: aqua;
+    text-align: center;
+    
+}
+.signupImg{
+    width: 100%;
+    height: 100%;
+    background-color:#F1F4FA;
+}
+.signupImg img{
+    margin: 20% auto auto auto;
+    height: 490px;
+    width: 650px;
+}
+.userInputBox input:hover{
+    outline: 2px solid rgb(36, 132, 196);
+}
+.loginNavigatorContainer{
+    margin: 15px auto auto auto;
+}
+
+@media only screen and (max-width: 1187px){
+   
+.google,.facebook{
+    width: 140px;
+   }
+.loginContainer{
+    width: 60%;
+   }
+.imgContainer{
+    width: 50%;
+   }
+}
+@media only screen and (max-width: 715px) {
+ 
+.loginContainer{
+    width: 70%;
+}
+.imgContainer{
+     width: 40%;
+}
+}
+@media only screen and (max-width: 615px) {
+   
+   #loginPageContainer{
+    display: contents;
+   }
+   .loginContainer{
+    width:100%;
+   }
+   .imgContainer img {
+    margin: 20% auto auto auto;
+    height: 300px;
+    width: 500px;   
+   };
+   
+   .google,.facebook{
+      width: 164px;  
+   }
+ }
+
+
+ @media only screen and (max-width: 1187px){
+   
+.signupcontainer{
+    width: 60%;
+}
+.signupImgContainer{
+    width: 50%;
+ }
+}
+@media only screen and (max-width: 715px) {
+ 
+.signupcontainer{
+    width: 70%;
+}
+.signupImgContainer{
+    width: 40%;
+}
+}
+@media only screen and (max-width: 615px) {
+   
+#signupPageContainer{
+    display: contents;
+ }
+.signupcontainer{
+     width:100%;
+}
+.signupImgContainer img {
+     margin: 20% auto auto auto;
+     height: 300px;
+     width: 500px;   
+};
+    
+}
