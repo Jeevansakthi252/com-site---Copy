@@ -66,6 +66,7 @@ window.addEventListener("DOMContentLoaded",()=>{
        email:"jamesmullican@gmail.com",
        date:"12 Dec, 2020",
        status:"Pending"
+       
     },
        {
        id:"#876366",
