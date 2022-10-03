@@ -58,84 +58,74 @@ window.addEventListener("DOMContentLoaded",()=>{
        name:"Arrora Gour",
        email:"arroragaur@gmail.com",
        date:"12 Dec, 2020",
+       status:"Complete"
     },
        {
        id:"#876365",
        name:"James Mullican",
        email:"jamesmullican@gmail.com",
        date:"12 Dec, 2020",
+       status:"Pending"
     },
        {
        id:"#876366",
        name:"Robert Bacins",
        email:"robert bacins@gmail.com",
        date:"12 Dec, 2020",
+       status:"Complete"
     },
        {
        id:"#876367",
        name:"Bethany Jackson",
        email:"bethanyjackson@gmail.com",
        date:"12 Dec, 2020",
+       status:"Cancel"
     },
        {
        id:"#876368",
        name:"Anne Jacob",
        email:"annejacob@gmail.com",
        date:"12 Dec, 2020",
+       status:"Complete"
     }
    ]
    
+   let listCont = document.createElement('div')
+
+
+
+   for(let i=0;i<invoice.length;i++){
+      
+       list = document.createElement('div')
+       list.classList.add('list')  
+       listCont.appendChild(list) 
+       
+       let checkbox = document.createElement('input')
+       checkbox.type = 'checkBox'
+       checkbox.id = 'checkbox'
+       list.appendChild(checkbox)
    
-for(let i = 0;i<=invoice.length;i++){
-    array(i)
- 
- function array(indexValue){
-
- 
- let selIndex = indexValue
- let selUserId = invoice[selIndex]['id']
- let selUserName = invoice[selIndex]['name']
- let selUserEmail = invoice[selIndex]['email']
- let selUserDate = invoice[selIndex]['date']
- 
-//  console.log(checkboxArray);
- 
- checkboxArray.push(selUserId,selUserName,selUserEmail,selUserDate )
- 
-//  checkboxArray[checkboxArray.length] =  selUserId,selUserName,selUserEmail,selUserDate
- 
- document.getElementById('fstListId').innerHTML = checkboxArray[0]
- document.getElementById('fstListName').innerHTML = checkboxArray[1]
- document.getElementById('fstListEmail').innerHTML = checkboxArray[2]
- document.getElementById('fstListDate').innerHTML = checkboxArray[3]
-
- document.getElementById('sndListId').innerHTML = checkboxArray[4]
- document.getElementById('sndListName').innerHTML = checkboxArray[5]
- document.getElementById('sndListEmail').innerHTML = checkboxArray[6]
- document.getElementById('sndListDate').innerHTML = checkboxArray[7]
- 
- document.getElementById('thirdListId').innerHTML = checkboxArray[8]
- document.getElementById('thirdListName').innerHTML = checkboxArray[9]
- document.getElementById('thirdListEmail').innerHTML = checkboxArray[10]
- document.getElementById('thirdListDate').innerHTML = checkboxArray[11]
- 
- document.getElementById('fourthListId').innerHTML = checkboxArray[12]
- document.getElementById('fourthListName').innerHTML = checkboxArray[13]
- document.getElementById('fourthListEmail').innerHTML = checkboxArray[14]
- document.getElementById('fourthListDate').innerHTML = checkboxArray[15]
- 
- document.getElementById('fifthListId').innerHTML = checkboxArray[16]
- document.getElementById('fifthListName').innerHTML = checkboxArray[17]
- document.getElementById('fifthListEmail').innerHTML = checkboxArray[18]
- document.getElementById('fifthListDate').innerHTML = checkboxArray[19]
- 
-
- 
- 
- }
-}
-
- })
+       for(let j in invoice[i]){
+   
+        let txtCon = document.createElement('span')
+        txtCon.classList.add('txtCon')
+        let textAlign = document.createElement('div')
+        textAlign.classList.add('textAlign')
+        textAlign.innerText +=  invoice[i][j] 
+        txtCon.appendChild(textAlign)
+        list.appendChild(txtCon)
+        // let span = document.createElement('span')
+        // span.classList.add('mySpan')
+        // span.innerHTML =  invoice[i][j] 
+        // txtCon.appendChild(span)
+        // listAlign.appendChild(txtCon)
+           
+       }
+   }
+   
+   document.getElementById('employeeList').appendChild(listCont)
+   
+   })
  let checkboxArray = [] 
  
 

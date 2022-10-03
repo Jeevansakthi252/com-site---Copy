@@ -47,12 +47,13 @@ for(let i=0;i<invoice.length;i++){
     listAlign.classList.add('listAlign')
 
     for(let j in invoice[i]){
-
+        let txtCon = document.createElement('div')
+        txtCon.classList.add('txtCon')
         let span = document.createElement('span')
         span.classList.add('mySpan')
-        
         span.innerHTML =  invoice[i][j] 
-        listAlign.appendChild(span)
+        txtCon.appendChild(span)
+        listAlign.appendChild(txtCon)
         
     }
 }
