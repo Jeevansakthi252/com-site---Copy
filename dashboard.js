@@ -51,149 +51,172 @@ function unselectedPage(){
 //     document.getElementById('fifthName').innerHTML = invoiceName[4]
         
 //     })
+
+const invoiceData = [
+    {
+    id:"#876364",
+    name:"Arrora Gour",
+    email:"arroragaur@gmail.com",
+    date:"12 Dec, 2020",
+    status:"Complete"
+ },
+    {
+    id:"#876365",
+    name:"James Mullican",
+    email:"jamesmullican@gmail.com",
+    date:"12 Dec, 2020",
+    status:"Pending"
+    
+ },
+    {
+    id:"#876366",
+    name:"Robert Bacins",
+    email:"robert bacins@gmail.com",
+    date:"12 Dec, 2020",
+    status:"Complete"
+ },
+    {
+    id:"#876367",
+    name:"Bethany Jackson",
+    email:"bethanyjackson@gmail.com",
+    date:"12 Dec, 2020",
+    status:"Cancel"
+ },
+    {
+    id:"#876368",
+    name:"Anne Jacob",
+    email:"annejacob@gmail.com",
+    date:"12 Dec, 2020",
+    status:"Complete"
+ }
+]
+
+
 window.addEventListener("DOMContentLoaded",()=>{
-    const invoice = [
-       {
-       id:"#876364",
-       name:"Arrora Gour",
-       email:"arroragaur@gmail.com",
-       date:"12 Dec, 2020",
-       status:"Complete"
-    },
-       {
-       id:"#876365",
-       name:"James Mullican",
-       email:"jamesmullican@gmail.com",
-       date:"12 Dec, 2020",
-       status:"Pending"
+    loadData();
+ } )
+
+
+function loadData(){
+    var invoice = invoiceData;
+   
+    let listCont = document.createElement('div')
+ 
+    for(let i=0;i<invoice.length;i++){
        
-    },
-       {
-       id:"#876366",
-       name:"Robert Bacins",
-       email:"robert bacins@gmail.com",
-       date:"12 Dec, 2020",
-       status:"Complete"
-    },
-       {
-       id:"#876367",
-       name:"Bethany Jackson",
-       email:"bethanyjackson@gmail.com",
-       date:"12 Dec, 2020",
-       status:"Cancel"
-    },
-       {
-       id:"#876368",
-       name:"Anne Jacob",
-       email:"annejacob@gmail.com",
-       date:"12 Dec, 2020",
-       status:"Complete"
+        let list = document.createElement('div')
+        list.classList.add('list')  
+        listCont.appendChild(list) 
+        
+        let checkbox = document.createElement('input')
+        checkbox.type = 'checkBox'
+        checkbox.id = 'checkbox'
+        list.appendChild(checkbox)
+    
+        for(let j in invoice[i]){
+    
+             let txtContainer = document.createElement('span')
+              txtContainer.classList.add('txtCon')
+             let textAlign = document.createElement('div')
+             textAlign.classList.add('textAlign')
+             textAlign.innerText +=  invoice[i][j] 
+             txtContainer.appendChild(textAlign)
+             list.appendChild(txtContainer)
+        }
+        let deleteButton = document.createElement('button')
+        deleteButton.classList.add('deleteButton')
+        deleteButton.addEventListener('click',()=>{
+         // alert(invoice[i].id)
+         let deleteId = invoice[i].id;
+         let index = invoice.findIndex(x =>x.id === deleteId);
+        invoice.splice(index,1);
+         loadData();
+        });
+        deleteButton.innerHTML = "Delete"
+        list.appendChild(deleteButton)
+        
     }
-   ]
+ 
    
-   let listCont = document.createElement('div')
+    // if(document.getElementById('employeeList')){
+        document.getElementById('employeeList').remove();
+        let employeeElement= document.createElement('div');
+        employeeElement.id = "employeeList";
+        document.getElementById('listContainer').appendChild(employeeElement);
+    // }
+    document.getElementById('employeeList').appendChild(listCont)
+ 
+ }
 
 
 
-   for(let i=0;i<invoice.length;i++){
-      
-       list = document.createElement('div')
-       list.classList.add('list')  
-       listCont.appendChild(list) 
-       
-       let checkbox = document.createElement('input')
-       checkbox.type = 'checkBox'
-       checkbox.id = 'checkbox'
-       list.appendChild(checkbox)
-   
-       for(let j in invoice[i]){
-   
-        let txtCon = document.createElement('span')
-        txtCon.classList.add('txtCon')
-        let textAlign = document.createElement('div')
-        textAlign.classList.add('textAlign')
-        textAlign.innerText +=  invoice[i][j] 
-        txtCon.appendChild(textAlign)
-        list.appendChild(txtCon)
-        // let span = document.createElement('span')
-        // span.classList.add('mySpan')
-        // span.innerHTML =  invoice[i][j] 
-        // txtCon.appendChild(span)
-        // listAlign.appendChild(txtCon)
-           
-       }
-   }
-   
-   document.getElementById('employeeList').appendChild(listCont)
-   
-   })
- let checkboxArray = [] 
+//  let checkboxArray = [] 
  
 
-window.addEventListener('DOMContentLoaded',()=>{
-    const dashboard =[
-        {
-            taskName :"UI Design",
-            startDate:"03/12/2021",
-            endDate:"05/12/2021",
-            members:"5 Members",
-            workStatus:"Pending"
-        },
-        {
-            taskName :"Logo Design",
-            startDate:"03/12/2021",
-            endDate:"05/12/2021",
-            members:"5 Members",
-            workStatus:"Pending"
-        },
+// window.addEventListener('DOMContentLoaded',()=>{
+//     const dashboard =[
+//         {
+//             taskName :"UI Design",
+//             startDate:"03/12/2021",
+//             endDate:"05/12/2021",
+//             members:"5 Members",
+//             workStatus:"Pending"
+//         },
+//         {
+//             taskName :"Logo Design",
+//             startDate:"03/12/2021",
+//             endDate:"05/12/2021",
+//             members:"5 Members",
+//             workStatus:"Pending"
+//         },
       
-    ]
+//     ]
     
-    for(let i = 0; i <=dashboard.length; i++){
-        dashboardArray(i)
-    }
-     function dashboardArray(indexNum){
-    
-     
-     let selIndex = indexNum
-     console.log(selIndex);
-     
-     let taskName = dashboard[selIndex]['taskName']
-     let startDate = dashboard[selIndex]['startDate']
-     let endDate = dashboard[selIndex]['endDate']
-     let members = dashboard[selIndex]['members']
-     let workStatus = dashboard[selIndex]['workStatus']
-     
-    
+//     for(let i = 0; i <=dashboard.length; i++){
+//         dashboardArray(i)
+//     }
+//      function dashboardArray(indexNum){
     
      
-     DashboardCheckboxArray.push(taskName,startDate,endDate,members,workStatus )
+//      let selIndex = indexNum
+//      console.log(selIndex);
      
-     document.getElementById('fstTaskName').innerHTML = DashboardCheckboxArray[0]
-     document.getElementById('taskStartDate').innerHTML = DashboardCheckboxArray[1]
-     document.getElementById('taskEndDate').innerHTML = DashboardCheckboxArray[2]
-     document.getElementById('fstMembers').innerHTML = DashboardCheckboxArray[3]
-     document.getElementById('workStatus').innerHTML = DashboardCheckboxArray[4]
+//      let taskName = dashboard[selIndex]['taskName']
+//      let startDate = dashboard[selIndex]['startDate']
+//      let endDate = dashboard[selIndex]['endDate']
+//      let members = dashboard[selIndex]['members']
+//      let workStatus = dashboard[selIndex]['workStatus']
+     
     
-     document.getElementById('sndTaskName').innerHTML = DashboardCheckboxArray[5]
-     document.getElementById('sndTaskStartDate').innerHTML = DashboardCheckboxArray[6]
-     document.getElementById('sndTaskEndDate').innerHTML = DashboardCheckboxArray[7]
-     document.getElementById('sndMembers').innerHTML = DashboardCheckboxArray[8]
-     document.getElementById('sndworkStatus').innerHTML = DashboardCheckboxArray[9]
+    
+     
+//      DashboardCheckboxArray.push(taskName,startDate,endDate,members,workStatus )
+     
+//      document.getElementById('fstTaskName').innerHTML = DashboardCheckboxArray[0]
+//      document.getElementById('taskStartDate').innerHTML = DashboardCheckboxArray[1]
+//      document.getElementById('taskEndDate').innerHTML = DashboardCheckboxArray[2]
+//      document.getElementById('fstMembers').innerHTML = DashboardCheckboxArray[3]
+//      document.getElementById('workStatus').innerHTML = DashboardCheckboxArray[4]
+    
+//      document.getElementById('sndTaskName').innerHTML = DashboardCheckboxArray[5]
+//      document.getElementById('sndTaskStartDate').innerHTML = DashboardCheckboxArray[6]
+//      document.getElementById('sndTaskEndDate').innerHTML = DashboardCheckboxArray[7]
+//      document.getElementById('sndMembers').innerHTML = DashboardCheckboxArray[8]
+//      document.getElementById('sndworkStatus').innerHTML = DashboardCheckboxArray[9]
 
-     }
-})
-let DashboardCheckboxArray = [];
+//      }
+// })
+// let DashboardCheckboxArray = [];
 
-function selectMenuList(value){
-    unselectedMenuList()
-    document.getElementById(value).style.display="block"
-}
-function unselectedMenuList(){
-    document.getElementById("fstEditAndDeleteContainer").style.display="none"
-    document.getElementById("sndEditAndDeleteContainer").style.display="none"
-    document.getElementById("thirdEditAndDeleteContainer").style.display="none"
-    document.getElementById("fourthEditAndDeleteContainer").style.display="none"
-    document.getElementById("fifthEditAndDeleteContainer").style.display="none"
+// function selectMenuList(value){
+//     unselectedMenuList()
+//     document.getElementById(value).style.display="block"
+// }
+// function unselectedMenuList(){
+//     document.getElementById("fstEditAndDeleteContainer").style.display="none"
+//     document.getElementById("sndEditAndDeleteContainer").style.display="none"
+//     document.getElementById("thirdEditAndDeleteContainer").style.display="none"
+//     document.getElementById("fourthEditAndDeleteContainer").style.display="none"
+//     document.getElementById("fifthEditAndDeleteContainer").style.display="none"
 
-}
+// }

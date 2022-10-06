@@ -1353,5 +1353,22 @@ span:nth-child(4){
 }
 span:nth-child(5){
     /* background-color: aqua; */
-    width: 200px;
+    width: 170px;
+}
+span:nth-child(6){
+    
+    width: 100px;
+    border-radius: 20PX;
+    text-align: center;
+    align-items: center;
+    margin: 9px;
+}
+
+.deleteButton{
+    background-color: #f1f1f5;
+    height: 40px;
+    width: 80px;
+    margin: 10px auto auto 30px;
+    border-radius: 20px;
+    font-weight: bold;
 }
