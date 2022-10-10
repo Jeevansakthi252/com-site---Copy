@@ -1364,11 +1364,12 @@ span:nth-child(6){
     margin: 9px;
 }
 
-.deleteButton{
+.button{
     background-color: #f1f1f5;
     height: 40px;
     width: 80px;
     margin: 10px auto auto 30px;
     border-radius: 20px;
     font-weight: bold;
+    cursor: pointer;
 }
