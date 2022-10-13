@@ -1,320 +1,1024 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="dashboard.css">
-    <script src="https://kit.fontawesome.com/cb143ad508.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <script
+      src="https://kit.fontawesome.com/cb143ad508.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="dashboard.js"></script>
     <script src="index.js"></script>
     <title>web site</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-        <div id="loginPageContainer">
+      <div id="loginPageContainer">
         <div class="loginContainer">
-            <div class="logo">
-                    <img src="images/logo.jpeg" alt="">
-                </div> 
-                <div class="loginText">
-                    <span><h3>Login</h3></span>
-                </div>
-                <div class="socialLogin">
-                    <div class="google">
-                        <div class="googleLogo"><img src="images/icons8-google.svg" alt=""></div> 
-                     <P>Google</P>
-                    </div>
-                    <div class="facebook">
-                        <div class="facebookLogo"><img src="images/icons8-facebook-f.svg" alt=""></div>  
-                        <p>Facebook</p>
-                    </div>
-                </div>
-                <div class="or">
-                    <h4>Or</h4>
-                </div> 
-                <div class="emailText">
-                    <span>Email Address</span>
-                </div>
-                <form id="siginEmailForm" action="#">
-                <div class="emailLabelBox" >
-                    <input type="email" placeholder="example@gmail.com" id="email" onkeydown="emailValidation()" autocomplete="off" required>
-                    <span id="emailTextField"></span>
-                </div>
-                </form>
-                <div class="passwordText">
-                    <span>Password</span>
-                </div>
-                <form id="siginPasswordForm" action="#">
-                <div class="passwordLabelBox" >
-                    <input type="password" placeholder="..........." id="password"  onkeydown="passwordValidation()"  required>                
-                    <span onclick="visible()" >
-                        <i id="show" class="fa-solid fa-eye"></i>
-                        <i id="hide" class="fa-solid fa-eye-slash"></i>
-                    </span> 
-                    <span id="passwordTextField"></span>                   
-                </div>
-                
-            </form>
-               <div class="rememberAndResetPasswordField">
-                 <div class="rememberField">
-                    <div class="checkboxAndRememberField">
-                     <input type="checkbox">
-                     <span>Remember me</span>
-                    </div>
-                </div>
-                 <div id="resetPasswordField">
-                    <div class="resetPassword">
-                     <a href="#">Reset Password?</a>
-                    </div>
-                </div> 
+          <div class="logo">
+            <img src="images/logo.jpeg" alt="" />
+          </div>
+          <div class="loginText">
+            <span><h3>Login</h3></span>
+          </div>
+          <div class="socialLogin">
+            <div class="google">
+              <div class="googleLogo">
+                <img src="images/icons8-google.svg" alt="" />
+              </div>
+              <p>Google</p>
             </div>
-            <div class="loginButton" >
-                <button onclick="dashboardNavigation()">Log in</button>
-            </div>  
-            <div class="signupNavigatorContainer">
-                <div class="signupNavigatorLabel">
-                Don't have account yet?<a href="#" onclick="signupNavigation()">New Account</a>
+            <div class="facebook">
+              <div class="facebookLogo">
+                <img src="images/icons8-facebook-f.svg" alt="" />
+              </div>
+              <p>Facebook</p>
             </div>
-            </div>    
+          </div>
+          <div class="or">
+            <h4>Or</h4>
+          </div>
+          <div class="emailText">
+            <span>Email Address</span>
+          </div>
+          <form id="siginEmailForm" action="#">
+            <div class="emailLabelBox">
+              <input
+                type="email"
+                placeholder="example@gmail.com"
+                id="emailValue"
+                onkeydown="emailValidation()"
+                autocomplete="off"
+                required
+              />
+              <span id="emailTextField"></span>
+            </div>
+          </form>
+          <div class="passwordText">
+            <span>Password</span>
+          </div>
+          <form id="siginPasswordForm" action="#">
+            <div class="passwordLabelBox">
+              <input
+                type="password"
+                placeholder="..........."
+                id="password"
+                onkeydown="passwordValidation()"
+                required
+              />
+              <span onclick="visible()">
+                <i id="show" class="fa-solid fa-eye"></i>
+                <i id="hide" class="fa-solid fa-eye-slash"></i>
+              </span>
+              <span id="passwordTextField"></span>
+            </div>
+          </form>
+          <div class="rememberAndResetPasswordField">
+            <div class="rememberField">
+              <div class="checkboxAndRememberField">
+                <input type="checkbox" />
+                <span>Remember me</span>
+              </div>
+            </div>
+            <div id="resetPasswordField">
+              <div class="resetPassword">
+                <a href="#">Reset Password?</a>
+              </div>
+            </div>
+          </div>
+          <div class="loginButton">
+            <button onclick="dashboardNavigation()">Log in</button>
+          </div>
+          <div class="signupNavigatorContainer">
+            <div class="signupNavigatorLabel">
+              Don't have account yet?<a href="#" onclick="signupNavigation()"
+                >New Account</a
+              >
+            </div>
+          </div>
         </div>
         <div class="imgContainer">
-            <div class="img">
-                <img src="images/side.jpeg" alt="">
-            </div>
+          <div class="img">
+            <img src="images/side.jpeg" alt="" />
+          </div>
         </div>
-    </div>
-    <!-- signup page-->
-    <div  id="signupPageContainer">
-    <div class="signupcontainer">
-        <div class="logo">
-                <img src="images/logo.jpeg" alt="">
-            </div> 
-            <div class="signupText">
-                <span><h3>Sign up</h3></span>
+      </div>
+      <!-- signup page-->
+      <div id="signupPageContainer">
+        <div class="signupcontainer">
+          <div class="logo">
+            <img src="images/logo.jpeg" alt="" />
+          </div>
+          <div class="signupText">
+            <span><h3>Sign up</h3></span>
+          </div>
+          <div class="socialLogin">
+            <div class="google">
+              <div class="googleLogo">
+                <img src="images/icons8-google.svg" alt="" />
+              </div>
+              <p>Google</p>
             </div>
-            <div class="socialLogin">
-                <div class="google">
-                    <div class="googleLogo"><img src="images/icons8-google.svg" alt=""></div>
-                    <P>Google</P>
-                </div>
-                <div class="facebook">
-                    <div class="facebookLogo"><img src="images/icons8-facebook-f.svg" alt=""></div>
-                    <p>Facebook</p>
-                </div>
+            <div class="facebook">
+              <div class="facebookLogo">
+                <img src="images/icons8-facebook-f.svg" alt="" />
+              </div>
+              <p>Facebook</p>
             </div>
-            <div class="or">
-                <h4>Or</h4>
-            </div> 
-            
-            <div class="firstName">
-                   <span> First name</span>
+          </div>
+          <div class="or">
+            <h4>Or</h4>
+          </div>
+
+          <div class="firstName">
+            <span> First name</span>
+          </div>
+          <div class="firstNameLable">
+            <input
+              type="text"
+              placeholder="Enter your name"
+              onclick="nameField()"
+              id="nameInput"
+              required
+            />
+            <span id="nameTextField"></span>
+          </div>
+          <div class="emailText">
+            <span>Email Address</span>
+          </div>
+          <form id="siginEmailForm" action="#">
+            <div class="emailLabelBox">
+              <input
+                type="email"
+                placeholder="example@gmail.com"
+                id="email"
+                onkeydown="emailValidation()"
+                autocomplete="off"
+                required
+              />
+              <span id="emailTextField"></span>
             </div>
-            <div class="firstNameLable">
-                 <input type="text" placeholder="Enter your name"onclick="nameField()"id="nameInput" required>
-                 <span id="nameTextField"></span>
-            </div>
-            <div class="emailText">
-                   <span>Email Address</span>
-            </div>
-            <form id="siginEmailForm" action="#">
-                <div class="emailLabelBox" >
-                    <input type="email" placeholder="example@gmail.com" id="email" onkeydown="emailValidation()" autocomplete="off" required>
-                    <span id="emailTextField"></span>
-                </div>
-                </form>
-            
-            <div class="userName">
-                   <span> User Name</span>
-            </div>
-            <div class="userInputBox">
-                 <input type="text" placeholder="User Name" required>
-                 <span id="userTextField"></span>
-            </div>
-           
-            <div class="passwordText">
-                   <span> Password </span>
-            </div>
-            <div class="passwordLabelBox" >
-                <input type="password" placeholder="..........." id="ipass" required>
+          </form>
+
+          <div class="userName">
+            <span> User Name</span>
+          </div>
+          <div class="userInputBox">
+            <input type="text" placeholder="User Name" required />
+            <span id="userTextField"></span>
+          </div>
+
+          <div class="passwordText">
+            <span> Password </span>
+          </div>
+          <div class="passwordLabelBox">
+            <input
+              type="password"
+              placeholder="..........."
+              id="ipass"
+              required
+            />
             <!-- </div>
             <div class="hidebutton"> -->
-                <span onclick="visible()">
-                    <i id="show" class="fa-solid fa-eye"></i>
-                    <i id="hide" class="fa-solid fa-eye-slash"></i>
-                </span>
-                <span id="passwordTextField"></span> 
+            <span onclick="visible()">
+              <i id="show" class="fa-solid fa-eye"></i>
+              <i id="hide" class="fa-solid fa-eye-slash"></i>
+            </span>
+            <span id="passwordTextField"></span>
+          </div>
+
+          <div class="checkboxContainer">
+            <div class="checkboxAndTermsPolicy">
+              <input type="checkbox" />
+              <span
+                >By creating an account you agree to the<br />
+                &nbsp &nbsp<a href="#">terms of use</a> and our
+                <a href="#">privacy policy </a>
+              </span>
             </div>
-        
-            <div class="checkboxContainer">
-                   <div class="checkboxAndTermsPolicy">
-                    <input type="checkbox">
-                    <span>By creating an account you agree to the<br>  &nbsp  &nbsp<a href="#">terms of use</a> and our <a href="#">privacy policy </a> </span>
-                   </div>
-             </div>
-             <div class="createButton" >
-                <button >Create account</button>
-            </div> 
-            <div class="signinNavigatorContainer">
-                <div class="signinNavigatorLabel">
-                <span>Already have an account?<a href="#" onclick="signinNavigation()"> Log in</a></span>
+          </div>
+          <div class="createButton">
+            <button>Create account</button>
+          </div>
+          <div class="signinNavigatorContainer">
+            <div class="signinNavigatorLabel">
+              <span
+                >Already have an account?<a
+                  href="#"
+                  onclick="signinNavigation()"
+                >
+                  Log in</a
+                ></span
+              >
             </div>
-            </div>                  
-    </div>
-    <div class="signupImgContainer">
-        <div class="signupImg">
-            <img src="images/Sign_side.jpeg" alt="">
+          </div>
         </div>
-    </div>
-    </div>
-    <div id="dashboardMenuContainer">
+        <div class="signupImgContainer">
+          <div class="signupImg">
+            <img src="images/Sign_side.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="dashboardMenuContainer">
         <div class="menuContainer">
-            <div class="logo">
-                <img src="images/logo.jpeg" alt="">
-            </div> 
-            <div class="logoName">
-                <span><h2>Wons</h2></span>
+          <div class="logo">
+            <img src="images/logo.jpeg" alt="" />
+          </div>
+          <div class="logoName">
+            <span><h2>Wons</h2></span>
+          </div>
+          <div class="menu">
+            <div
+              id="dashboardContainer"
+              onclick="openPage('dashboardExpContainer')"
+            >
+              <div class="dashboardIcon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="
+                    filter: invert(19%) sepia(95%) saturate(2846%)
+                      hue-rotate(239deg) brightness(87%) contrast(100%);
+                  "
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.54 0H5.92C7.33 0 8.46 1.15 8.46 2.561V5.97C8.46 7.39 7.33 8.53 5.92 8.53H2.54C1.14 8.53 0 7.39 0 5.97V2.561C0 1.15 1.14 0 2.54 0ZM2.54 11.4697H5.92C7.33 11.4697 8.46 12.6107 8.46 14.0307V17.4397C8.46 18.8497 7.33 19.9997 5.92 19.9997H2.54C1.14 19.9997 0 18.8497 0 17.4397V14.0307C0 12.6107 1.14 11.4697 2.54 11.4697ZM17.4601 0H14.0801C12.6701 0 11.5401 1.15 11.5401 2.561V5.97C11.5401 7.39 12.6701 8.53 14.0801 8.53H17.4601C18.8601 8.53 20.0001 7.39 20.0001 5.97V2.561C20.0001 1.15 18.8601 0 17.4601 0ZM14.0801 11.4697H17.4601C18.8601 11.4697 20.0001 12.6107 20.0001 14.0307V17.4397C20.0001 18.8497 18.8601 19.9997 17.4601 19.9997H14.0801C12.6701 19.9997 11.5401 18.8497 11.5401 17.4397V14.0307C11.5401 12.6107 12.6701 11.4697 14.0801 11.4697Z"
+                    fill="#06152B"
+                  />
+                </svg>
+              </div>
+              <div id="dashboard" onclick="selectedPage('dashboard')">
+                <p>Dashboard</p>
+              </div>
             </div>
-            <div class="menu">
-                <div id="dashboardContainer"onclick="openPage('dashboardExpContainer')" >
-                    <div class="dashboardIcon">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.54 0H5.92C7.33 0 8.46 1.15 8.46 2.561V5.97C8.46 7.39 7.33 8.53 5.92 8.53H2.54C1.14 8.53 0 7.39 0 5.97V2.561C0 1.15 1.14 0 2.54 0ZM2.54 11.4697H5.92C7.33 11.4697 8.46 12.6107 8.46 14.0307V17.4397C8.46 18.8497 7.33 19.9997 5.92 19.9997H2.54C1.14 19.9997 0 18.8497 0 17.4397V14.0307C0 12.6107 1.14 11.4697 2.54 11.4697ZM17.4601 0H14.0801C12.6701 0 11.5401 1.15 11.5401 2.561V5.97C11.5401 7.39 12.6701 8.53 14.0801 8.53H17.4601C18.8601 8.53 20.0001 7.39 20.0001 5.97V2.561C20.0001 1.15 18.8601 0 17.4601 0ZM14.0801 11.4697H17.4601C18.8601 11.4697 20.0001 12.6107 20.0001 14.0307V17.4397C20.0001 18.8497 18.8601 19.9997 17.4601 19.9997H14.0801C12.6701 19.9997 11.5401 18.8497 11.5401 17.4397V14.0307C11.5401 12.6107 12.6701 11.4697 14.0801 11.4697Z" fill="#06152B"/>
-                            </svg>      
-                    </div>
-                    <div id="dashboard"onclick="selectedPage('dashboard')">
-                         <p>Dashboard</p>
-                    </div>
-                </div>
-              
-                <div id="analyticsContainer"onclick="openPage('analyticsExpContainer')" >
-                    <div class="analyticsIcon">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.33 0H14.669C18.07 0 19.99 1.929 20 5.33V14.67C20 18.07 18.07 20 14.669 20H5.33C1.929 20 0 18.07 0 14.67V5.33C0 1.929 1.929 0 5.33 0ZM10.049 15.86C10.48 15.86 10.839 15.54 10.879 15.11V4.92C10.919 4.61 10.77 4.299 10.5 4.13C10.219 3.96 9.879 3.96 9.61 4.13C9.339 4.299 9.19 4.61 9.219 4.92V15.11C9.27 15.54 9.629 15.86 10.049 15.86ZM14.65 15.86C15.07 15.86 15.429 15.54 15.48 15.11V11.83C15.509 11.509 15.36 11.21 15.089 11.04C14.82 10.87 14.48 10.87 14.2 11.04C13.929 11.21 13.78 11.509 13.82 11.83V15.11C13.86 15.54 14.219 15.86 14.65 15.86ZM6.219 15.11C6.179 15.54 5.82 15.86 5.389 15.86C4.959 15.86 4.599 15.54 4.56 15.11V8.2C4.53 7.889 4.679 7.58 4.95 7.41C5.219 7.24 5.56 7.24 5.83 7.41C6.099 7.58 6.25 7.889 6.219 8.2V15.11Z" fill="#030229"/>
-                            </svg>     
-                    </div>
-                    <div id="analytics" onclick="selectedPage('analytics')">
-                         <p >Analytics</p>
-                    </div>
-                </div>
-                <div id="invoiceContainer"onclick="openPage('invoiceExpContainer')"  >
-                    <div class="invoiceIcon">
-                        <svg  width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7872 6.53905C19.6518 6.67058 19.4681 6.74574 19.2747 6.74574C18.559 6.74574 17.9787 7.30945 17.9787 7.9953C17.9787 8.68585 18.5522 9.24674 19.2611 9.25426C19.6605 9.25802 20 9.5286 20 9.91662V12.3265C20 14.3549 18.3075 16 16.2186 16H13.0658C12.7398 16 12.4758 15.7435 12.4758 15.4269V13.3975C12.4758 13.0029 12.1567 12.6929 11.7505 12.6929C11.354 12.6929 11.0251 13.0029 11.0251 13.3975V15.4269C11.0251 15.7435 10.7611 16 10.4362 16H3.78143C1.70213 16 0 14.3558 0 12.3265V9.91662C0 9.5286 0.339458 9.25802 0.738878 9.25426C1.44874 9.24674 2.02128 8.68585 2.02128 7.9953C2.02128 7.32824 1.46035 6.8209 0.725339 6.8209C0.531915 6.8209 0.348162 6.74574 0.212766 6.61421C0.0773694 6.48268 0 6.30417 0 6.11627V3.68291C0 1.65731 1.706 0 3.7911 0H10.4362C10.7611 0 11.0251 0.256489 11.0251 0.573106V2.97827C11.0251 3.36348 11.354 3.68291 11.7505 3.68291C12.1567 3.68291 12.4758 3.36348 12.4758 2.97827V0.573106C12.4758 0.256489 12.7398 0 13.0658 0H16.2186C18.3075 0 20 1.64416 20 3.67352V6.0411C20 6.22901 19.9226 6.40752 19.7872 6.53905ZM11.7505 10.8702C12.1567 10.8702 12.4758 10.5508 12.4758 10.1656V6.40752C12.4758 6.02231 12.1567 5.70288 11.7505 5.70288C11.354 5.70288 11.0251 6.02231 11.0251 6.40752V10.1656C11.0251 10.5508 11.354 10.8702 11.7505 10.8702Z" fill="#030229"/>
-                            </svg>                                                  
-                    </div>
-                    <div id="invoice"onclick="selectedPage('invoice')">
-                         <p>Invoice</p>
-                    </div>
-                </div>
-                <div class="scheduleContainer"onclick="openPage('scheduleExpContainer')" >
-                    <div class="scheduleIcon">
-                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.81 0H13.191C16.28 0 18 1.78 18 4.83V15.16C18 18.26 16.28 20 13.191 20H4.81C1.77 20 0 18.26 0 15.16V4.83C0 1.78 1.77 0 4.81 0ZM5.08 4.66V4.65H8.069C8.5 4.65 8.85 5 8.85 5.429C8.85 5.87 8.5 6.22 8.069 6.22H5.08C4.649 6.22 4.3 5.87 4.3 5.44C4.3 5.01 4.649 4.66 5.08 4.66ZM5.08 10.74H12.92C13.35 10.74 13.7 10.39 13.7 9.96C13.7 9.53 13.35 9.179 12.92 9.179H5.08C4.649 9.179 4.3 9.53 4.3 9.96C4.3 10.39 4.649 10.74 5.08 10.74ZM5.08 15.31H12.92C13.319 15.27 13.62 14.929 13.62 14.53C13.62 14.12 13.319 13.78 12.92 13.74H5.08C4.78 13.71 4.49 13.85 4.33 14.11C4.17 14.36 4.17 14.69 4.33 14.95C4.49 15.2 4.78 15.35 5.08 15.31Z" fill="#030229"/>
-                            </svg>                                                                                                    
-                    </div>
-                    <div id="schedule"onclick="selectedPage('schedule')">
-                         <p>Schedule</p>
-                    </div>
-                </div>
-                <div class="calenderContainer"onclick="openPage('calenderExpContainer')" >
-                    <div class="calenderIcon">
-                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4109 0.768617L13.4119 1.51824C16.1665 1.73413 17.9862 3.61119 17.9891 6.48975L18 14.9155C18.0039 18.054 16.0322 19.985 12.8718 19.99L5.15188 20C2.01119 20.004 0.0148166 18.027 0.0108673 14.8795L6.64975e-06 6.55272C-0.00394266 3.65517 1.75153 1.78311 4.50617 1.53024L4.50518 0.780611C4.5042 0.340832 4.83001 0.00999726 5.26444 0.00999726C5.69886 0.00899776 6.02468 0.338833 6.02567 0.778612L6.02666 1.47826L11.8914 1.47027L11.8904 0.770616C11.8894 0.330837 12.2152 0.00100177 12.6497 2.26549e-06C13.0742 -0.000997234 13.4099 0.328838 13.4109 0.768617ZM1.52148 6.86157L16.4696 6.84158V6.49175C16.4272 4.34283 15.349 3.21539 13.4138 3.04748L13.4148 3.81709C13.4148 4.24688 13.0801 4.5877 12.6556 4.5877C12.2212 4.5887 11.8943 4.24887 11.8943 3.81909L11.8934 3.0095L6.02863 3.01749L6.02962 3.82609C6.02962 4.25687 5.70479 4.5967 5.27036 4.5967C4.83594 4.5977 4.50913 4.25887 4.50913 3.82809L4.50815 3.05847C2.58286 3.25137 1.51753 4.38281 1.52049 6.55072L1.52148 6.86157ZM12.2399 11.4043V11.4153C12.2498 11.8751 12.625 12.2239 13.0801 12.2139C13.5244 12.2029 13.8789 11.8221 13.869 11.3623C13.8483 10.9225 13.4918 10.5637 13.0485 10.5647C12.5944 10.5747 12.2389 10.9445 12.2399 11.4043ZM13.0554 15.892C12.6013 15.882 12.235 15.5032 12.234 15.0435C12.2241 14.5837 12.5884 14.2029 13.0426 14.1919H13.0525C13.5165 14.1919 13.8927 14.5707 13.8927 15.0405C13.8937 15.5102 13.5185 15.891 13.0554 15.892ZM8.17212 11.4203C8.19187 11.8801 8.56804 12.2389 9.02221 12.2189C9.46651 12.1979 9.82096 11.8181 9.80121 11.3583C9.79035 10.9085 9.42504 10.5587 8.98074 10.5597C8.52657 10.5797 8.17113 10.9605 8.17212 11.4203ZM9.02616 15.8471C8.57199 15.8671 8.1968 15.5082 8.17607 15.0485C8.17607 14.5887 8.53052 14.2089 8.98469 14.1879C9.42899 14.1869 9.79529 14.5367 9.80516 14.9855C9.82589 15.4463 9.47046 15.8261 9.02616 15.8471ZM4.10433 11.4553C4.12408 11.915 4.50025 12.2749 4.95442 12.2539C5.39872 12.2339 5.75317 11.8531 5.73243 11.3933C5.72256 10.9435 5.35725 10.5937 4.91196 10.5947C4.45779 10.6147 4.10334 10.9955 4.10433 11.4553ZM4.95837 15.8521C4.5042 15.8731 4.12901 15.5132 4.10828 15.0535C4.10729 14.5937 4.46273 14.2129 4.9169 14.1929C5.3612 14.1919 5.7275 14.5417 5.73737 14.9915C5.7581 15.4513 5.40365 15.8321 4.95837 15.8521Z" fill="#030229"/>
-                            </svg>                                                                                                   
-                    </div>
-                    <div id="calender"onclick="selectedPage('calender')">
-                         <p>Calender</p>
-                    </div>
-                </div>
-                <div class="messagesContainer"onclick="openPage('messagesExpContainer')" >
-                    <div class="messagesIcon">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1801 2.41C15.1801 1.08 16.2601 0 17.5901 0C18.9201 0 20.0001 1.08 20.0001 2.41C20.0001 3.74 18.9201 4.82 17.5901 4.82C16.2601 4.82 15.1801 3.74 15.1801 2.41ZM11.33 12.7593L14.22 9.0303L14.18 9.0503C14.34 8.8303 14.37 8.5503 14.26 8.3003C14.151 8.0503 13.91 7.8803 13.651 7.8603C13.38 7.8303 13.111 7.9503 12.95 8.1703L10.531 11.3003L7.76 9.1203C7.59 8.9903 7.39 8.9393 7.19 8.9603C6.991 8.9903 6.811 9.0993 6.69 9.2593L3.731 13.1103L3.67 13.2003C3.5 13.5193 3.58 13.9293 3.88 14.1503C4.02 14.2403 4.17 14.3003 4.34 14.3003C4.571 14.3103 4.79 14.1893 4.93 14.0003L7.44 10.7693L10.29 12.9103L10.38 12.9693C10.7 13.1393 11.1 13.0603 11.33 12.7593ZM13.45 1.7803C13.41 2.0303 13.39 2.2803 13.39 2.5303C13.39 4.7803 15.21 6.5993 17.45 6.5993C17.7 6.5993 17.94 6.5703 18.19 6.5303V14.5993C18.19 17.9903 16.19 20.0003 12.79 20.0003H5.401C2 20.0003 0 17.9903 0 14.5993V7.2003C0 3.8003 2 1.7803 5.401 1.7803H13.45Z" fill="#030229"/>
-                            </svg>
-                            
-                            
-                    </div>
-                    <div id="messages"onclick="selectedPage('messages')">
-                         <p>Messages</p>
-                    </div>
-                </div>
-                <div class="notificationContainer" onclick="openPage('notificationExpContainer')" >
-                    <div class="notificationIcon">
-                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 6.79633C15.7071 8.05226 16.039 8.79253 16.7695 9.64559C17.3231 10.2741 17.5 11.0808 17.5 11.956C17.5 12.8302 17.2128 13.6601 16.6373 14.3339C15.884 15.1417 14.8215 15.6573 13.7372 15.747C12.1659 15.8809 10.5937 15.9937 9.0005 15.9937C7.40634 15.9937 5.83505 15.9263 4.26375 15.747C3.17846 15.6573 2.11602 15.1417 1.36367 14.3339C0.78822 13.6601 0.5 12.8302 0.5 11.956C0.5 11.0808 0.677901 10.2741 1.23049 9.64559C1.98384 8.79253 2.29392 8.05226 2.29392 6.79633V6.3703C2.29392 4.68834 2.71333 3.58852 3.577 2.51186C4.86106 0.941697 6.91935 0 8.95577 0H9.04522C11.1254 0 13.2502 0.987019 14.5125 2.62466C15.3314 3.67916 15.7071 4.73265 15.7071 6.3703V6.79633ZM6.07367 18.0608C6.07367 17.5573 6.53582 17.3266 6.96318 17.2279C7.46309 17.1222 10.5093 17.1222 11.0092 17.2279C11.4366 17.3266 11.8987 17.5573 11.8987 18.0608C11.8738 18.5402 11.5926 18.9653 11.204 19.2352C10.7001 19.628 10.1088 19.8767 9.49057 19.9664C9.14868 20.0107 8.81276 20.0117 8.48279 19.9664C7.86362 19.8767 7.27227 19.628 6.76938 19.2342C6.37978 18.9653 6.09852 18.5402 6.07367 18.0608Z" fill="#06152B"/>
-                            </svg>
-                                                                
-                    </div>
-                    <div id="notification"onclick="selectedPage('notification')">
-                         <p>Notification</p>
-                    </div>
-                </div>
-                <div class="settingsContainer" onclick="openPage('settingsExpContainer')" >
-                    <div class="settingsIcon">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4023 11.58C18.76 11.77 19.036 12.07 19.2301 12.37C19.6083 12.99 19.5776 13.75 19.2097 14.42L18.4943 15.62C18.1162 16.26 17.411 16.66 16.6855 16.66C16.3278 16.66 15.9292 16.56 15.6022 16.36C15.3365 16.19 15.0299 16.13 14.7029 16.13C13.6911 16.13 12.8429 16.96 12.8122 17.95C12.8122 19.1 11.872 20 10.6968 20H9.30692C8.12145 20 7.18125 19.1 7.18125 17.95C7.16081 16.96 6.31259 16.13 5.30085 16.13C4.96361 16.13 4.65702 16.19 4.40153 16.36C4.0745 16.56 3.66572 16.66 3.31825 16.66C2.58245 16.66 1.87729 16.26 1.49917 15.62L0.79402 14.42C0.415896 13.77 0.395456 12.99 0.773581 12.37C0.937094 12.07 1.24368 11.77 1.59115 11.58C1.87729 11.44 2.06125 11.21 2.23498 10.94C2.74596 10.08 2.43937 8.95 1.57071 8.44C0.55897 7.87 0.231943 6.6 0.814459 5.61L1.49917 4.43C2.09191 3.44 3.35913 3.09 4.38109 3.67C5.27019 4.15 6.425 3.83 6.9462 2.98C7.10972 2.7 7.20169 2.4 7.18125 2.1C7.16081 1.71 7.27323 1.34 7.4674 1.04C7.84553 0.42 8.53024 0.02 9.27627 0H10.7172C11.4735 0 12.1582 0.42 12.5363 1.04C12.7203 1.34 12.8429 1.71 12.8122 2.1C12.7918 2.4 12.8838 2.7 13.0473 2.98C13.5685 3.83 14.7233 4.15 15.6226 3.67C16.6344 3.09 17.9118 3.44 18.4943 4.43L19.179 5.61C19.7718 6.6 19.4447 7.87 18.4228 8.44C17.5541 8.95 17.2475 10.08 17.7687 10.94C17.9322 11.21 18.1162 11.44 18.4023 11.58ZM7.10972 10.01C7.10972 11.58 8.4076 12.83 10.0121 12.83C11.6165 12.83 12.8838 11.58 12.8838 10.01C12.8838 8.44 11.6165 7.18 10.0121 7.18C8.4076 7.18 7.10972 8.44 7.10972 10.01Z" fill="#030229"/>
-                            </svg>
-                            
-                        </div>
-                    <div id="settings"onclick="selectedPage('settings')">
-                         <p>Settings</p>
-                    </div>
-                </div>
-                <div class="coneDesign">
-                    <svg width="168" height="195" viewBox="0 0 168 195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect x="9" width="150" height="150" fill="url(#pattern0)"/>
-                        <rect opacity="0.1" y="34" width="168" height="161" rx="20" fill="#FF69B4"/>
-                        <g style="mix-blend-mode:color">
-                        <rect x="9" width="150" height="150" fill="#FF69B4"/>
-                        </g>
-                        <path d="M15 157C15 151.477 19.4772 147 25 147H143C148.523 147 153 151.477 153 157V170C153 175.523 148.523 180 143 180H25C19.4772 180 15 175.523 15 170V157Z" fill="#FF69B4"/>
-                        <path d="M49.1333 167.152C48.5266 167.152 47.9746 167.034 47.4774 166.798C46.9887 166.553 46.5969 166.178 46.3019 165.673C46.007 165.167 45.8595 164.523 45.8595 163.739V158.152H46.9213V163.752C46.9213 164.611 47.1277 165.235 47.5406 165.622C47.9535 166.01 48.4929 166.204 49.1586 166.204C49.8243 166.204 50.3594 166.01 50.7638 165.622C51.1683 165.235 51.3706 164.611 51.3706 163.752V158.152H52.4323V163.739C52.4323 164.523 52.2849 165.167 51.9899 165.673C51.695 166.178 51.2989 166.553 50.8018 166.798C50.3046 167.034 49.7484 167.152 49.1333 167.152ZM54.1672 169.781V160.731H55.1278L55.2289 161.767C55.4312 161.464 55.7177 161.19 56.0884 160.945C56.4676 160.701 56.948 160.579 57.5294 160.579C58.153 160.579 58.6965 160.722 59.16 161.009C59.6234 161.295 59.9816 161.687 60.2344 162.184C60.4956 162.681 60.6262 163.246 60.6262 163.878C60.6262 164.51 60.4956 165.075 60.2344 165.572C59.9816 166.06 59.6192 166.448 59.1473 166.735C58.6839 167.013 58.1403 167.152 57.5168 167.152C57.0027 167.152 56.5435 167.046 56.139 166.836C55.7429 166.625 55.4396 166.33 55.2289 165.951V169.781H54.1672ZM57.403 166.229C57.8243 166.229 58.1951 166.132 58.5153 165.938C58.8355 165.736 59.0883 165.458 59.2737 165.104C59.4591 164.75 59.5518 164.337 59.5518 163.865C59.5518 163.393 59.4591 162.98 59.2737 162.627C59.0883 162.273 58.8355 161.999 58.5153 161.805C58.1951 161.603 57.8243 161.502 57.403 161.502C56.9817 161.502 56.6109 161.603 56.2907 161.805C55.9705 161.999 55.7177 162.273 55.5323 162.627C55.3469 162.98 55.2542 163.393 55.2542 163.865C55.2542 164.337 55.3469 164.75 55.5323 165.104C55.7177 165.458 55.9705 165.736 56.2907 165.938C56.6109 166.132 56.9817 166.229 57.403 166.229ZM64.3101 165.028C63.9561 165.028 63.6317 164.982 63.3368 164.889L62.7048 165.483C62.7975 165.551 62.9112 165.61 63.0461 165.66C63.1893 165.702 63.3916 165.744 63.6528 165.787C63.914 165.82 64.2806 165.858 64.7525 165.9C65.5951 165.959 66.1976 166.153 66.56 166.482C66.9223 166.81 67.1035 167.24 67.1035 167.771C67.1035 168.133 67.0024 168.479 66.8001 168.808C66.6063 169.136 66.303 169.406 65.8901 169.616C65.4856 169.827 64.9631 169.932 64.3227 169.932C63.7581 169.932 63.2567 169.857 62.8185 169.705C62.3804 169.562 62.0391 169.338 61.7947 169.035C61.5503 168.74 61.4281 168.365 61.4281 167.91C61.4281 167.674 61.4913 167.417 61.6177 167.139C61.7441 166.869 61.9801 166.612 62.3256 166.368C62.1402 166.292 61.9801 166.212 61.8453 166.128C61.7189 166.035 61.6009 165.934 61.4913 165.824V165.534L62.5657 164.472C62.0686 164.051 61.82 163.495 61.82 162.804C61.82 162.391 61.9169 162.016 62.1107 161.679C62.3045 161.341 62.5868 161.076 62.9576 160.882C63.3284 160.68 63.7792 160.579 64.3101 160.579C64.6724 160.579 65.0011 160.629 65.296 160.731H67.6091V161.527L66.4336 161.577C66.678 161.931 66.8001 162.34 66.8001 162.804C66.8001 163.216 66.699 163.591 66.4968 163.928C66.303 164.266 66.0207 164.535 65.6499 164.737C65.2876 164.931 64.8409 165.028 64.3101 165.028ZM64.3101 164.156C64.7567 164.156 65.1106 164.042 65.3718 163.815C65.6415 163.579 65.7763 163.242 65.7763 162.804C65.7763 162.374 65.6415 162.045 65.3718 161.818C65.1106 161.582 64.7567 161.464 64.3101 161.464C63.855 161.464 63.4927 161.582 63.223 161.818C62.9618 162.045 62.8312 162.374 62.8312 162.804C62.8312 163.242 62.9618 163.579 63.223 163.815C63.4927 164.042 63.855 164.156 64.3101 164.156ZM62.4646 167.809C62.4646 168.23 62.6416 168.542 62.9955 168.744C63.3494 168.955 63.7918 169.06 64.3227 169.06C64.8452 169.06 65.2623 168.947 65.5741 168.719C65.8943 168.492 66.0544 168.188 66.0544 167.809C66.0544 167.539 65.9448 167.303 65.7257 167.101C65.5067 166.907 65.1022 166.794 64.5123 166.76C64.0488 166.726 63.6486 166.684 63.3115 166.633C62.966 166.819 62.7385 167.017 62.6289 167.228C62.5194 167.447 62.4646 167.64 62.4646 167.809ZM68.8068 167V160.731H69.7675L69.856 161.931C70.0498 161.518 70.3447 161.19 70.7408 160.945C71.1368 160.701 71.6256 160.579 72.207 160.579V161.691H71.9163C71.5455 161.691 71.2042 161.759 70.8924 161.893C70.5807 162.02 70.3321 162.239 70.1467 162.551C69.9613 162.863 69.8686 163.292 69.8686 163.84V167H68.8068ZM75.4843 167.152C74.9619 167.152 74.5279 167.063 74.1824 166.886C73.8369 166.709 73.5799 166.473 73.4114 166.178C73.2428 165.883 73.1586 165.563 73.1586 165.218C73.1586 164.577 73.4029 164.084 73.8917 163.739C74.3804 163.393 75.0461 163.221 75.8888 163.221H77.5826V163.145C77.5826 162.597 77.4393 162.184 77.1528 161.906C76.8663 161.62 76.4829 161.476 76.0026 161.476C75.5897 161.476 75.2315 161.582 74.9282 161.792C74.6332 161.995 74.4478 162.294 74.372 162.69H73.285C73.3271 162.235 73.4788 161.851 73.74 161.54C74.0097 161.228 74.3425 160.992 74.7386 160.832C75.1346 160.663 75.556 160.579 76.0026 160.579C76.8789 160.579 77.5362 160.815 77.9744 161.287C78.421 161.75 78.6443 162.37 78.6443 163.145V167H77.6963L77.6331 165.875C77.4562 166.229 77.1949 166.532 76.8494 166.785C76.5124 167.029 76.0573 167.152 75.4843 167.152ZM75.6486 166.254C76.0531 166.254 76.3986 166.149 76.6851 165.938C76.9801 165.728 77.2034 165.454 77.355 165.117C77.5067 164.78 77.5826 164.426 77.5826 164.055V164.042H75.9773C75.3537 164.042 74.9113 164.152 74.6501 164.371C74.3973 164.582 74.2709 164.847 74.2709 165.167C74.2709 165.496 74.3889 165.761 74.6248 165.964C74.8692 166.157 75.2105 166.254 75.6486 166.254ZM83.0812 167.152C82.4576 167.152 81.9099 167.008 81.438 166.722C80.9745 166.435 80.6121 166.044 80.3509 165.546C80.0981 165.049 79.9717 164.485 79.9717 163.853C79.9717 163.221 80.1023 162.66 80.3636 162.172C80.6248 161.674 80.9871 161.287 81.4506 161.009C81.9141 160.722 82.4618 160.579 83.0938 160.579C83.6078 160.579 84.0629 160.684 84.4589 160.895C84.855 161.106 85.1625 161.4 85.3816 161.78V157.899H86.4434V167H85.4828L85.3816 165.964C85.1794 166.267 84.8887 166.541 84.5095 166.785C84.1303 167.029 83.6542 167.152 83.0812 167.152ZM83.1949 166.229C83.6163 166.229 83.987 166.132 84.3072 165.938C84.6359 165.736 84.8887 165.458 85.0656 165.104C85.251 164.75 85.3437 164.337 85.3437 163.865C85.3437 163.393 85.251 162.98 85.0656 162.627C84.8887 162.273 84.6359 161.999 84.3072 161.805C83.987 161.603 83.6163 161.502 83.1949 161.502C82.782 161.502 82.4112 161.603 82.0826 161.805C81.7624 161.999 81.5096 162.273 81.3242 162.627C81.1472 162.98 81.0588 163.393 81.0588 163.865C81.0588 164.337 81.1472 164.75 81.3242 165.104C81.5096 165.458 81.7624 165.736 82.0826 165.938C82.4112 166.132 82.782 166.229 83.1949 166.229ZM90.9929 167.152C90.3946 167.152 89.8637 167.017 89.4003 166.747C88.9368 166.469 88.5702 166.086 88.3006 165.597C88.0394 165.108 87.9088 164.531 87.9088 163.865C87.9088 163.208 88.0394 162.635 88.3006 162.146C88.5618 161.649 88.9242 161.266 89.3876 160.996C89.8595 160.718 90.403 160.579 91.0182 160.579C91.6249 160.579 92.1474 160.718 92.5856 160.996C93.0322 161.266 93.3734 161.624 93.6094 162.07C93.8453 162.517 93.9633 162.997 93.9633 163.511C93.9633 163.604 93.9591 163.697 93.9507 163.789C93.9507 163.882 93.9507 163.987 93.9507 164.105H88.9579C88.9832 164.586 89.0927 164.986 89.2865 165.306C89.4888 165.618 89.7373 165.854 90.0323 166.014C90.3356 166.174 90.6558 166.254 90.9929 166.254C91.4311 166.254 91.7977 166.153 92.0926 165.951C92.3875 165.749 92.6024 165.475 92.7372 165.129H93.7864C93.6178 165.711 93.2934 166.195 92.8131 166.583C92.3412 166.962 91.7345 167.152 90.9929 167.152ZM90.9929 161.476C90.4873 161.476 90.0365 161.632 89.6404 161.944C89.2528 162.247 89.0295 162.694 88.9705 163.284H92.9142C92.8889 162.719 92.6951 162.277 92.3328 161.957C91.9704 161.636 91.5238 161.476 90.9929 161.476ZM98.779 167V158.152H99.8407L104.555 165.243V158.152H105.617V167H104.555L99.8407 159.909V167H98.779ZM110.287 167.152C109.697 167.152 109.166 167.017 108.694 166.747C108.223 166.478 107.848 166.098 107.569 165.61C107.3 165.112 107.165 164.531 107.165 163.865C107.165 163.2 107.304 162.622 107.582 162.134C107.86 161.636 108.235 161.253 108.707 160.983C109.187 160.714 109.722 160.579 110.312 160.579C110.902 160.579 111.433 160.714 111.905 160.983C112.377 161.253 112.748 161.636 113.017 162.134C113.295 162.622 113.434 163.2 113.434 163.865C113.434 164.531 113.295 165.112 113.017 165.61C112.739 166.098 112.36 166.478 111.88 166.747C111.408 167.017 110.877 167.152 110.287 167.152ZM110.287 166.242C110.649 166.242 110.986 166.153 111.298 165.976C111.61 165.799 111.863 165.534 112.057 165.18C112.25 164.826 112.347 164.388 112.347 163.865C112.347 163.343 112.25 162.905 112.057 162.551C111.871 162.197 111.623 161.931 111.311 161.754C110.999 161.577 110.666 161.489 110.312 161.489C109.95 161.489 109.613 161.577 109.301 161.754C108.989 161.931 108.737 162.197 108.543 162.551C108.349 162.905 108.252 163.343 108.252 163.865C108.252 164.388 108.349 164.826 108.543 165.18C108.737 165.534 108.985 165.799 109.289 165.976C109.6 166.153 109.933 166.242 110.287 166.242ZM115.94 167L114.107 160.731H115.169L116.496 165.648L117.963 160.731H119.163L120.642 165.648L121.957 160.731H123.031L121.198 167H120.111L118.569 161.83L117.027 167H115.94Z" fill="white"/>
-                        <path d="M20 155L33.4908 112H134.905L147 155H20Z" fill="url(#paint0_linear_2_10955)"/>
-                        <defs>
-                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_2_10955" transform="scale(0.000925926)"/>
-                        </pattern>
-                        <linearGradient id="paint0_linear_2_10955" x1="83.5" y1="112" x2="83.5" y2="155" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#FF69B4" stop-opacity="0.4"/>
-                        <stop offset="1" stop-color="#FF69B4" stop-opacity="0"/>
-                        </linearGradient>
-                        
-                          </defs>
-                        </svg>
-                        
-                </div>
+
+            <div
+              id="analyticsContainer"
+              onclick="openPage('analyticsExpContainer')"
+            >
+              <div class="analyticsIcon">
+                <svg
+                  id="clickColor"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.33 0H14.669C18.07 0 19.99 1.929 20 5.33V14.67C20 18.07 18.07 20 14.669 20H5.33C1.929 20 0 18.07 0 14.67V5.33C0 1.929 1.929 0 5.33 0ZM10.049 15.86C10.48 15.86 10.839 15.54 10.879 15.11V4.92C10.919 4.61 10.77 4.299 10.5 4.13C10.219 3.96 9.879 3.96 9.61 4.13C9.339 4.299 9.19 4.61 9.219 4.92V15.11C9.27 15.54 9.629 15.86 10.049 15.86ZM14.65 15.86C15.07 15.86 15.429 15.54 15.48 15.11V11.83C15.509 11.509 15.36 11.21 15.089 11.04C14.82 10.87 14.48 10.87 14.2 11.04C13.929 11.21 13.78 11.509 13.82 11.83V15.11C13.86 15.54 14.219 15.86 14.65 15.86ZM6.219 15.11C6.179 15.54 5.82 15.86 5.389 15.86C4.959 15.86 4.599 15.54 4.56 15.11V8.2C4.53 7.889 4.679 7.58 4.95 7.41C5.219 7.24 5.56 7.24 5.83 7.41C6.099 7.58 6.25 7.889 6.219 8.2V15.11Z"
+                    fill="#030229"
+                  />
+                </svg>
+              </div>
+              <div id="analytics" onclick="selectedPage('analytics')">
+                <p>Analytics</p>
+              </div>
             </div>
+            <div
+              id="invoiceContainer"
+              onclick="openPage('invoiceExpContainer')"
+            >
+              <div class="invoiceIcon">
+                <svg
+                  width="20"
+                  height="16"
+                  viewBox="0 0 20 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.7872 6.53905C19.6518 6.67058 19.4681 6.74574 19.2747 6.74574C18.559 6.74574 17.9787 7.30945 17.9787 7.9953C17.9787 8.68585 18.5522 9.24674 19.2611 9.25426C19.6605 9.25802 20 9.5286 20 9.91662V12.3265C20 14.3549 18.3075 16 16.2186 16H13.0658C12.7398 16 12.4758 15.7435 12.4758 15.4269V13.3975C12.4758 13.0029 12.1567 12.6929 11.7505 12.6929C11.354 12.6929 11.0251 13.0029 11.0251 13.3975V15.4269C11.0251 15.7435 10.7611 16 10.4362 16H3.78143C1.70213 16 0 14.3558 0 12.3265V9.91662C0 9.5286 0.339458 9.25802 0.738878 9.25426C1.44874 9.24674 2.02128 8.68585 2.02128 7.9953C2.02128 7.32824 1.46035 6.8209 0.725339 6.8209C0.531915 6.8209 0.348162 6.74574 0.212766 6.61421C0.0773694 6.48268 0 6.30417 0 6.11627V3.68291C0 1.65731 1.706 0 3.7911 0H10.4362C10.7611 0 11.0251 0.256489 11.0251 0.573106V2.97827C11.0251 3.36348 11.354 3.68291 11.7505 3.68291C12.1567 3.68291 12.4758 3.36348 12.4758 2.97827V0.573106C12.4758 0.256489 12.7398 0 13.0658 0H16.2186C18.3075 0 20 1.64416 20 3.67352V6.0411C20 6.22901 19.9226 6.40752 19.7872 6.53905ZM11.7505 10.8702C12.1567 10.8702 12.4758 10.5508 12.4758 10.1656V6.40752C12.4758 6.02231 12.1567 5.70288 11.7505 5.70288C11.354 5.70288 11.0251 6.02231 11.0251 6.40752V10.1656C11.0251 10.5508 11.354 10.8702 11.7505 10.8702Z"
+                    fill="#030229"
+                  />
+                </svg>
+              </div>
+              <div id="invoice" onclick="selectedPage('invoice')">
+                <p>Invoice</p>
+              </div>
+            </div>
+            <div
+              class="scheduleContainer"
+              onclick="openPage('scheduleExpContainer')"
+            >
+              <div class="scheduleIcon">
+                <svg
+                  width="18"
+                  height="20"
+                  viewBox="0 0 18 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.81 0H13.191C16.28 0 18 1.78 18 4.83V15.16C18 18.26 16.28 20 13.191 20H4.81C1.77 20 0 18.26 0 15.16V4.83C0 1.78 1.77 0 4.81 0ZM5.08 4.66V4.65H8.069C8.5 4.65 8.85 5 8.85 5.429C8.85 5.87 8.5 6.22 8.069 6.22H5.08C4.649 6.22 4.3 5.87 4.3 5.44C4.3 5.01 4.649 4.66 5.08 4.66ZM5.08 10.74H12.92C13.35 10.74 13.7 10.39 13.7 9.96C13.7 9.53 13.35 9.179 12.92 9.179H5.08C4.649 9.179 4.3 9.53 4.3 9.96C4.3 10.39 4.649 10.74 5.08 10.74ZM5.08 15.31H12.92C13.319 15.27 13.62 14.929 13.62 14.53C13.62 14.12 13.319 13.78 12.92 13.74H5.08C4.78 13.71 4.49 13.85 4.33 14.11C4.17 14.36 4.17 14.69 4.33 14.95C4.49 15.2 4.78 15.35 5.08 15.31Z"
+                    fill="#030229"
+                  />
+                </svg>
+              </div>
+              <div id="schedule" onclick="selectedPage('schedule')">
+                <p>Schedule</p>
+              </div>
+            </div>
+            <div
+              class="calenderContainer"
+              onclick="openPage('calenderExpContainer')"
+            >
+              <div class="calenderIcon">
+                <svg
+                  width="18"
+                  height="20"
+                  viewBox="0 0 18 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.4109 0.768617L13.4119 1.51824C16.1665 1.73413 17.9862 3.61119 17.9891 6.48975L18 14.9155C18.0039 18.054 16.0322 19.985 12.8718 19.99L5.15188 20C2.01119 20.004 0.0148166 18.027 0.0108673 14.8795L6.64975e-06 6.55272C-0.00394266 3.65517 1.75153 1.78311 4.50617 1.53024L4.50518 0.780611C4.5042 0.340832 4.83001 0.00999726 5.26444 0.00999726C5.69886 0.00899776 6.02468 0.338833 6.02567 0.778612L6.02666 1.47826L11.8914 1.47027L11.8904 0.770616C11.8894 0.330837 12.2152 0.00100177 12.6497 2.26549e-06C13.0742 -0.000997234 13.4099 0.328838 13.4109 0.768617ZM1.52148 6.86157L16.4696 6.84158V6.49175C16.4272 4.34283 15.349 3.21539 13.4138 3.04748L13.4148 3.81709C13.4148 4.24688 13.0801 4.5877 12.6556 4.5877C12.2212 4.5887 11.8943 4.24887 11.8943 3.81909L11.8934 3.0095L6.02863 3.01749L6.02962 3.82609C6.02962 4.25687 5.70479 4.5967 5.27036 4.5967C4.83594 4.5977 4.50913 4.25887 4.50913 3.82809L4.50815 3.05847C2.58286 3.25137 1.51753 4.38281 1.52049 6.55072L1.52148 6.86157ZM12.2399 11.4043V11.4153C12.2498 11.8751 12.625 12.2239 13.0801 12.2139C13.5244 12.2029 13.8789 11.8221 13.869 11.3623C13.8483 10.9225 13.4918 10.5637 13.0485 10.5647C12.5944 10.5747 12.2389 10.9445 12.2399 11.4043ZM13.0554 15.892C12.6013 15.882 12.235 15.5032 12.234 15.0435C12.2241 14.5837 12.5884 14.2029 13.0426 14.1919H13.0525C13.5165 14.1919 13.8927 14.5707 13.8927 15.0405C13.8937 15.5102 13.5185 15.891 13.0554 15.892ZM8.17212 11.4203C8.19187 11.8801 8.56804 12.2389 9.02221 12.2189C9.46651 12.1979 9.82096 11.8181 9.80121 11.3583C9.79035 10.9085 9.42504 10.5587 8.98074 10.5597C8.52657 10.5797 8.17113 10.9605 8.17212 11.4203ZM9.02616 15.8471C8.57199 15.8671 8.1968 15.5082 8.17607 15.0485C8.17607 14.5887 8.53052 14.2089 8.98469 14.1879C9.42899 14.1869 9.79529 14.5367 9.80516 14.9855C9.82589 15.4463 9.47046 15.8261 9.02616 15.8471ZM4.10433 11.4553C4.12408 11.915 4.50025 12.2749 4.95442 12.2539C5.39872 12.2339 5.75317 11.8531 5.73243 11.3933C5.72256 10.9435 5.35725 10.5937 4.91196 10.5947C4.45779 10.6147 4.10334 10.9955 4.10433 11.4553ZM4.95837 15.8521C4.5042 15.8731 4.12901 15.5132 4.10828 15.0535C4.10729 14.5937 4.46273 14.2129 4.9169 14.1929C5.3612 14.1919 5.7275 14.5417 5.73737 14.9915C5.7581 15.4513 5.40365 15.8321 4.95837 15.8521Z"
+                    fill="#030229"
+                  />
+                </svg>
+              </div>
+              <div id="calender" onclick="selectedPage('calender')">
+                <p>Calender</p>
+              </div>
+            </div>
+            <div
+              class="messagesContainer"
+              onclick="openPage('messagesExpContainer')"
+            >
+              <div class="messagesIcon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.1801 2.41C15.1801 1.08 16.2601 0 17.5901 0C18.9201 0 20.0001 1.08 20.0001 2.41C20.0001 3.74 18.9201 4.82 17.5901 4.82C16.2601 4.82 15.1801 3.74 15.1801 2.41ZM11.33 12.7593L14.22 9.0303L14.18 9.0503C14.34 8.8303 14.37 8.5503 14.26 8.3003C14.151 8.0503 13.91 7.8803 13.651 7.8603C13.38 7.8303 13.111 7.9503 12.95 8.1703L10.531 11.3003L7.76 9.1203C7.59 8.9903 7.39 8.9393 7.19 8.9603C6.991 8.9903 6.811 9.0993 6.69 9.2593L3.731 13.1103L3.67 13.2003C3.5 13.5193 3.58 13.9293 3.88 14.1503C4.02 14.2403 4.17 14.3003 4.34 14.3003C4.571 14.3103 4.79 14.1893 4.93 14.0003L7.44 10.7693L10.29 12.9103L10.38 12.9693C10.7 13.1393 11.1 13.0603 11.33 12.7593ZM13.45 1.7803C13.41 2.0303 13.39 2.2803 13.39 2.5303C13.39 4.7803 15.21 6.5993 17.45 6.5993C17.7 6.5993 17.94 6.5703 18.19 6.5303V14.5993C18.19 17.9903 16.19 20.0003 12.79 20.0003H5.401C2 20.0003 0 17.9903 0 14.5993V7.2003C0 3.8003 2 1.7803 5.401 1.7803H13.45Z"
+                    fill="#030229"
+                  />
+                </svg>
+              </div>
+              <div id="messages" onclick="selectedPage('messages')">
+                <p>Messages</p>
+              </div>
+            </div>
+            <div
+              class="notificationContainer"
+              onclick="openPage('notificationExpContainer')"
+            >
+              <div class="notificationIcon">
+                <svg
+                  width="18"
+                  height="20"
+                  viewBox="0 0 18 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.7071 6.79633C15.7071 8.05226 16.039 8.79253 16.7695 9.64559C17.3231 10.2741 17.5 11.0808 17.5 11.956C17.5 12.8302 17.2128 13.6601 16.6373 14.3339C15.884 15.1417 14.8215 15.6573 13.7372 15.747C12.1659 15.8809 10.5937 15.9937 9.0005 15.9937C7.40634 15.9937 5.83505 15.9263 4.26375 15.747C3.17846 15.6573 2.11602 15.1417 1.36367 14.3339C0.78822 13.6601 0.5 12.8302 0.5 11.956C0.5 11.0808 0.677901 10.2741 1.23049 9.64559C1.98384 8.79253 2.29392 8.05226 2.29392 6.79633V6.3703C2.29392 4.68834 2.71333 3.58852 3.577 2.51186C4.86106 0.941697 6.91935 0 8.95577 0H9.04522C11.1254 0 13.2502 0.987019 14.5125 2.62466C15.3314 3.67916 15.7071 4.73265 15.7071 6.3703V6.79633ZM6.07367 18.0608C6.07367 17.5573 6.53582 17.3266 6.96318 17.2279C7.46309 17.1222 10.5093 17.1222 11.0092 17.2279C11.4366 17.3266 11.8987 17.5573 11.8987 18.0608C11.8738 18.5402 11.5926 18.9653 11.204 19.2352C10.7001 19.628 10.1088 19.8767 9.49057 19.9664C9.14868 20.0107 8.81276 20.0117 8.48279 19.9664C7.86362 19.8767 7.27227 19.628 6.76938 19.2342C6.37978 18.9653 6.09852 18.5402 6.07367 18.0608Z"
+                    fill="#06152B"
+                  />
+                </svg>
+              </div>
+              <div id="notification" onclick="selectedPage('notification')">
+                <p>Notification</p>
+              </div>
+            </div>
+            <div
+              class="settingsContainer"
+              onclick="openPage('settingsExpContainer')"
+            >
+              <div class="settingsIcon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M18.4023 11.58C18.76 11.77 19.036 12.07 19.2301 12.37C19.6083 12.99 19.5776 13.75 19.2097 14.42L18.4943 15.62C18.1162 16.26 17.411 16.66 16.6855 16.66C16.3278 16.66 15.9292 16.56 15.6022 16.36C15.3365 16.19 15.0299 16.13 14.7029 16.13C13.6911 16.13 12.8429 16.96 12.8122 17.95C12.8122 19.1 11.872 20 10.6968 20H9.30692C8.12145 20 7.18125 19.1 7.18125 17.95C7.16081 16.96 6.31259 16.13 5.30085 16.13C4.96361 16.13 4.65702 16.19 4.40153 16.36C4.0745 16.56 3.66572 16.66 3.31825 16.66C2.58245 16.66 1.87729 16.26 1.49917 15.62L0.79402 14.42C0.415896 13.77 0.395456 12.99 0.773581 12.37C0.937094 12.07 1.24368 11.77 1.59115 11.58C1.87729 11.44 2.06125 11.21 2.23498 10.94C2.74596 10.08 2.43937 8.95 1.57071 8.44C0.55897 7.87 0.231943 6.6 0.814459 5.61L1.49917 4.43C2.09191 3.44 3.35913 3.09 4.38109 3.67C5.27019 4.15 6.425 3.83 6.9462 2.98C7.10972 2.7 7.20169 2.4 7.18125 2.1C7.16081 1.71 7.27323 1.34 7.4674 1.04C7.84553 0.42 8.53024 0.02 9.27627 0H10.7172C11.4735 0 12.1582 0.42 12.5363 1.04C12.7203 1.34 12.8429 1.71 12.8122 2.1C12.7918 2.4 12.8838 2.7 13.0473 2.98C13.5685 3.83 14.7233 4.15 15.6226 3.67C16.6344 3.09 17.9118 3.44 18.4943 4.43L19.179 5.61C19.7718 6.6 19.4447 7.87 18.4228 8.44C17.5541 8.95 17.2475 10.08 17.7687 10.94C17.9322 11.21 18.1162 11.44 18.4023 11.58ZM7.10972 10.01C7.10972 11.58 8.4076 12.83 10.0121 12.83C11.6165 12.83 12.8838 11.58 12.8838 10.01C12.8838 8.44 11.6165 7.18 10.0121 7.18C8.4076 7.18 7.10972 8.44 7.10972 10.01Z"
+                    fill="#030229"
+                  />
+                </svg>
+              </div>
+              <div id="settings" onclick="selectedPage('settings')">
+                <p>Settings</p>
+              </div>
+            </div>
+            <div class="coneDesign">
+              <img src="images/NavBar.jpeg" alt="" />
+            </div>
+          </div>
         </div>
-       <div class="expContainer">
-         <div id="dashboardExpContainer">
-            <h1>Dashboard</h1>
-         </div>
-         <div id="analyticsExpContainer">
+        <div class="expContainer">
+          <div id="dashboardExpContainer">
+            <div id="dashboardHeading">
+              <h1>Dashboard</h1>
+            </div>
+            <div class="dashboardAlign">
+              <div id="listAndSearch">
+                <div id="threeList">
+                  <div id="listButton"><p>List</p></div>
+                  <div id="boardButton"><p>Board</p></div>
+                  <div id="timelineButton"><p>Timeline</p></div>
+                </div>
+                <div class="dashboardSearchBox">
+                  <input type="text" placeholder="search" />
+                  <span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.6">
+                        <path
+                          d="M6.14286 11.2857C8.98318 11.2857 11.2857 8.98318 11.2857 6.14286C11.2857 3.30254 8.98318 1 6.14286 1C3.30254 1 1 3.30254 1 6.14286C1 8.98318 3.30254 11.2857 6.14286 11.2857Z"
+                          stroke="#06152B"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.0001 12.9992L10.4287 10.4277"
+                          stroke="#06152B"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="companyDetials">
+                <div class="saveProducts">
+                  <div class="svgSpace">
+                    <div class="heartSvg">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.85 0.50016C14.481 0.50016 15.111 0.58916 15.71 0.79016C19.401 1.99016 20.731 6.04016 19.62 9.58016C18.99 11.3892 17.96 13.0402 16.611 14.3892C14.68 16.2592 12.561 17.9192 10.28 19.3492L10.03 19.5002L9.77002 19.3392C7.48102 17.9192 5.35002 16.2592 3.40102 14.3792C2.06102 13.0302 1.03002 11.3892 0.390017 9.58016C-0.739983 6.04016 0.590017 1.99016 4.32102 0.76916C4.61102 0.66916 4.91002 0.59916 5.21002 0.56016H5.33002C5.61102 0.51916 5.89002 0.50016 6.17002 0.50016H6.28002C6.91002 0.51916 7.52002 0.62916 8.11102 0.83016H8.17002C8.21002 0.84916 8.24002 0.87016 8.26002 0.88916C8.48102 0.96016 8.69002 1.04016 8.89002 1.15016L9.27002 1.32016C9.36184 1.36913 9.4649 1.44396 9.55398 1.50863C9.61041 1.5496 9.66123 1.5865 9.70002 1.61016C9.71634 1.61979 9.73292 1.62947 9.74964 1.63923C9.83538 1.68928 9.9247 1.74142 10 1.79916C11.111 0.95016 12.46 0.49016 13.85 0.50016ZM16.51 7.70016C16.92 7.68916 17.27 7.36016 17.3 6.93916V6.82016C17.33 5.41916 16.481 4.15016 15.19 3.66016C14.78 3.51916 14.33 3.74016 14.18 4.16016C14.04 4.58016 14.26 5.04016 14.68 5.18916C15.321 5.42916 15.75 6.06016 15.75 6.75916V6.79016C15.731 7.01916 15.8 7.24016 15.94 7.41016C16.08 7.58016 16.29 7.67916 16.51 7.70016Z"
+                          fill="#3A36DB"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="textSpace">
+                    <p id="productStock">178+</p>
+                    <p id="storageDetials">Save Products</p>
+                  </div>
+                </div>
+
+                <div class="stockProducts">
+                  <div class="svgSpace">
+                    <div class="gameSvg">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M15.164 6.08252C15.4791 6.08684 15.7949 6.09117 16.1119 6.09441C19.5172 6.09441 22 8.52216 22 11.8748V16.1811C22 19.5337 19.5172 21.9615 16.1119 21.9615C14.7478 21.9904 13.3837 22 12.0098 22C10.6359 22 9.25221 21.9904 7.88813 21.9615C4.48283 21.9615 2 19.5337 2 16.1811V11.8748C2 8.52216 4.48283 6.09441 7.89794 6.09441C9.18351 6.07514 10.4985 6.05588 11.8332 6.05588V5.8921C11.8332 5.22736 11.2738 4.68786 10.6065 4.68786H9.63494C8.52601 4.68786 7.62316 3.80154 7.62316 2.72254C7.62316 2.32755 7.95682 2 8.35918 2C8.77134 2 9.09519 2.32755 9.09519 2.72254C9.09519 3.01156 9.34053 3.24277 9.63494 3.24277H10.6065C12.0883 3.25241 13.2954 4.43738 13.3052 5.88247V6.06551C13.9239 6.06551 14.5425 6.074 15.164 6.08252ZM10.8518 14.7457H9.82139V15.7669C9.82139 16.1618 9.48773 16.4894 9.08538 16.4894C8.67321 16.4894 8.34936 16.1618 8.34936 15.7669V14.7457H7.30913C6.90677 14.7457 6.57311 14.4277 6.57311 14.0231C6.57311 13.6281 6.90677 13.3006 7.30913 13.3006H8.34936V12.289C8.34936 11.894 8.67321 11.5665 9.08538 11.5665C9.48773 11.5665 9.82139 11.894 9.82139 12.289V13.3006H10.8518C11.2542 13.3006 11.5878 13.6281 11.5878 14.0231C11.5878 14.4277 11.2542 14.7457 10.8518 14.7457ZM15.0226 13.1175H15.1207C15.5231 13.1175 15.8567 12.7996 15.8567 12.395C15.8567 12 15.5231 11.6724 15.1207 11.6724H15.0226C14.6104 11.6724 14.2866 12 14.2866 12.395C14.2866 12.7996 14.6104 13.1175 15.0226 13.1175ZM16.7007 16.4316H16.7988C17.2012 16.4316 17.5348 16.1137 17.5348 15.7091C17.5348 15.3141 17.2012 14.9865 16.7988 14.9865H16.7007C16.2875 14.9865 15.9647 15.3141 15.9647 15.7091C15.9647 16.1137 16.2875 16.4316 16.7007 16.4316Z"
+                          fill="#03A89E"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="textSpace">
+                    <p id="productStock">20+</p>
+                    <p id="storageDetials">Stock Products</p>
+                  </div>
+                </div>
+                <div class="salesProducts">
+                  <div class="svgSpace">
+                    <div class="handbagSvg">
+                      <svg
+                        width="18"
+                        height="20"
+                        viewBox="0 0 18 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.9303 5C13.9621 4.92913 13.977 4.85189 13.9739 4.77432H14C13.8882 2.10591 11.6849 0 9.00494 0C6.325 0 4.12172 2.10591 4.00989 4.77432C3.9967 4.84898 3.9967 4.92535 4.00989 5H3.93171C2.65022 5 1.28034 5.84597 0.882639 8.12007L0.104905 14.3147C-0.531424 18.8629 1.81062 20 4.86853 20H13.1585C16.2075 20 18.4789 18.3535 17.9133 14.3147L17.1444 8.12007C16.676 5.90964 15.3503 5 14.0865 5H13.9303ZM12.4932 5C12.4654 4.92794 12.4506 4.85153 12.4497 4.77432C12.4497 2.85682 10.8899 1.30238 8.96575 1.30238C7.04164 1.30238 5.48184 2.85682 5.48184 4.77432C5.49502 4.84898 5.49502 4.92535 5.48184 5H12.4932ZM6.097 10.1486C5.60889 10.1486 5.21321 9.74131 5.21321 9.23893C5.21321 8.73655 5.60889 8.32929 6.097 8.32929C6.5851 8.32929 6.98079 8.73655 6.98079 9.23893C6.98079 9.74131 6.5851 10.1486 6.097 10.1486ZM11.002 9.23893C11.002 9.74131 11.3977 10.1486 11.8858 10.1486C12.3739 10.1486 12.7696 9.74131 12.7696 9.23893C12.7696 8.73655 12.3739 8.32929 11.8858 8.32929C11.3977 8.32929 11.002 8.73655 11.002 9.23893Z"
+                          fill="#FF69B4"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="textSpace">
+                    <p id="productStock">190+</p>
+                    <p id="storageDetials">Sales Products</p>
+                  </div>
+                </div>
+                <div class="jobApplication">
+                  <div class="svgSpace">
+                    <div class="toolSvg">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8.70435 1.51898C8.03402 1.51898 7.46373 1.9848 7.30365 2.61265H12.6863C12.5263 1.9848 11.956 1.51898 11.2856 1.51898H8.70435ZM14.2071 2.61264H16.1881C18.2891 2.61264 20 4.34428 20 6.47085C20 6.47085 19.94 7.3711 19.92 8.62477C19.918 8.72401 19.8699 8.82122 19.7909 8.87996C19.3097 9.2354 18.8694 9.52907 18.8294 9.54932C17.1686 10.6632 15.2386 11.447 13.1826 11.8369C13.0485 11.8632 12.9165 11.7934 12.8484 11.6739C12.2721 10.6754 11.1956 10.0253 9.995 10.0253C8.8024 10.0253 7.71586 10.6683 7.12256 11.6678C7.05353 11.7853 6.92346 11.8531 6.7904 11.8278C4.75138 11.4369 2.82141 10.6541 1.17059 9.55945L0.210105 8.89109C0.130065 8.84046 0.08004 8.74932 0.08004 8.64806C0.050025 8.13161 0 6.47085 0 6.47085C0 4.34428 1.71086 2.61264 3.81191 2.61264H5.78289C5.97299 1.1443 7.2036 0 8.70435 0H11.2856C12.7864 0 14.017 1.1443 14.2071 2.61264ZM19.6598 10.8152L19.6198 10.8355C17.5988 12.1924 15.1676 13.0937 12.6163 13.4684C12.2561 13.519 11.8959 13.2861 11.7959 12.9216C11.5758 12.0912 10.8654 11.5443 10.015 11.5443H10.005H9.98499C9.13457 11.5443 8.42421 12.0912 8.2041 12.9216C8.10405 13.2861 7.74387 13.519 7.38369 13.4684C4.83242 13.0937 2.4012 12.1924 0.38019 10.8355C0.370185 10.8254 0.270135 10.7646 0.190095 10.8152C0.10005 10.8659 0.10005 10.9874 0.10005 10.9874L0.170085 16.1519C0.170085 18.2785 1.87094 20 3.97199 20H16.018C18.1191 20 19.8199 18.2785 19.8199 16.1519L19.9 10.9874C19.9 10.9874 19.9 10.8659 19.8099 10.8152C19.7599 10.7849 19.6999 10.795 19.6598 10.8152ZM10.7454 15.0583C10.7454 15.4836 10.4152 15.8177 9.995 15.8177C9.58479 15.8177 9.24462 15.4836 9.24462 15.0583V13.7519C9.24462 13.3367 9.58479 12.9924 9.995 12.9924C10.4152 12.9924 10.7454 13.3367 10.7454 13.7519V15.0583Z"
+                          fill="#3A36DB"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="textSpace">
+                    <p id="productStock">12+</p>
+                    <p id="storageDetials">Job Application</p>
+                  </div>
+                </div>
+              </div>
+              <div class="todoContainer">
+                <div class="todolableConatainer">
+                  <p>To Do</p>
+                  <a href="">see more</a>
+                </div>
+                <div class="todoHeadingContainer">
+                  <div id="checkBoxTittle">
+                    <button>
+                      <p>checkbox</p>
+                    </button>
+                  </div>
+                  <div id="taskNameTittle">
+                    <button>
+                      <p>
+                        Task Name
+                        <span
+                          ><svg
+                            width="6"
+                            height="5"
+                            viewBox="0 0 6 5"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.2"
+                              d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                              fill="#06152B"
+                            />
+                          </svg>
+                        </span>
+                      </p>
+                    </button>
+                  </div>
+                  <div id="startDateTittle">
+                    <button>
+                      <p>
+                        Start Date
+                        <span
+                          ><svg
+                            width="6"
+                            height="5"
+                            viewBox="0 0 6 5"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.2"
+                              d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                              fill="#06152B"
+                            />
+                          </svg>
+                        </span>
+                      </p>
+                    </button>
+                  </div>
+                  <div id="endDateTittle">
+                    <button>
+                      <p>
+                        End Date
+                        <span
+                          ><svg
+                            width="6"
+                            height="5"
+                            viewBox="0 0 6 5"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.2"
+                              d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                              fill="#06152B"
+                            />
+                          </svg>
+                        </span>
+                      </p>
+                    </button>
+                  </div>
+                  <div id="memberTittle">
+                    <button>
+                      <p>
+                        Member
+                        <span
+                          ><svg
+                            width="6"
+                            height="5"
+                            viewBox="0 0 6 5"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.2"
+                              d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                              fill="#06152B"
+                            />
+                          </svg>
+                        </span>
+                      </p>
+                    </button>
+                  </div>
+                  <div id="statusTittle">
+                    <button>
+                      <p>
+                        Status
+                        <span
+                          ><svg
+                            width="6"
+                            height="5"
+                            viewBox="0 0 6 5"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.2"
+                              d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                              fill="#06152B"
+                            />
+                          </svg>
+                        </span>
+                      </p>
+                    </button>
+                  </div>
+                  <div id="actionsTittle">
+                    <button><p>Actions</p></button>
+                  </div>
+                </div>
+                <div id="todoListContainer"></div>
+              </div>
+              <div class="analyticsAndProduct">
+                <div class="analysticsContainer">
+                  <div class="analysticsTittle">
+                    <p>Analytics</p>
+                    <svg
+                      width="14"
+                      height="4"
+                      viewBox="0 0 14 4"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.3">
+                        <path
+                          d="M13.4874 1.01257C12.804 0.329152 11.696 0.329152 11.0126 1.01257C10.3291 1.69598 10.3291 2.80402 11.0126 3.48744C11.696 4.17085 12.804 4.17085 13.4874 3.48744C14.1709 2.80405 14.1709 1.69601 13.4874 1.01257Z"
+                          fill="#06152B"
+                        />
+                        <path
+                          d="M8.23744 1.01257C7.55402 0.329152 6.44598 0.329152 5.76257 1.01257C5.07915 1.69598 5.07915 2.80402 5.76257 3.48744C6.44598 4.17085 7.55402 4.17085 8.23744 3.48744C8.92085 2.80405 8.92085 1.69601 8.23744 1.01257Z"
+                          fill="#06152B"
+                        />
+                        <path
+                          d="M2.98744 1.01257C2.30402 0.329152 1.19598 0.329152 0.512564 1.01257C-0.170852 1.69598 -0.170852 2.80402 0.512564 3.48744C1.19598 4.17085 2.30402 4.17085 2.98744 3.48744C3.67085 2.80405 3.67085 1.69601 2.98744 1.01257Z"
+                          fill="#06152B"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="analyticsImage">
+                    <img src="images/analyticsImg.jpeg" alt="" />
+                  </div>
+                </div>
+                <div class="topSellingProduct">
+                  <div class="topSellingProductTittle">
+                    <p>Top Selling Products</p>
+                    <svg
+                      width="14"
+                      height="4"
+                      viewBox="0 0 14 4"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.3">
+                        <path
+                          d="M13.4874 1.01257C12.804 0.329152 11.696 0.329152 11.0126 1.01257C10.3291 1.69598 10.3291 2.80402 11.0126 3.48744C11.696 4.17085 12.804 4.17085 13.4874 3.48744C14.1709 2.80405 14.1709 1.69601 13.4874 1.01257Z"
+                          fill="#06152B"
+                        />
+                        <path
+                          d="M8.23744 1.01257C7.55402 0.329152 6.44598 0.329152 5.76257 1.01257C5.07915 1.69598 5.07915 2.80402 5.76257 3.48744C6.44598 4.17085 7.55402 4.17085 8.23744 3.48744C8.92085 2.80405 8.92085 1.69601 8.23744 1.01257Z"
+                          fill="#06152B"
+                        />
+                        <path
+                          d="M2.98744 1.01257C2.30402 0.329152 1.19598 0.329152 0.512564 1.01257C-0.170852 1.69598 -0.170852 2.80402 0.512564 3.48744C1.19598 4.17085 2.30402 4.17085 2.98744 3.48744C3.67085 2.80405 3.67085 1.69601 2.98744 1.01257Z"
+                          fill="#06152B"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="nikeContainer">
+                    <div class="nikeImg">
+                      <img src="images/nikeImg.jpeg" alt="" />
+                    </div>
+                    <div class="imgPrice">
+                      <p id="tittleName">NIKE Shoes Black Pattern</p>
+                      <svg
+                        width="83"
+                        height="18"
+                        viewBox="0 0 83 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.9376 10.885C11.7434 11.1102 11.6541 11.4359 11.6984 11.7554L12.365 16.1704C12.4213 16.5445 12.2893 16.9232 12.0276 17.1395C11.7711 17.3638 11.4299 17.3907 11.1502 17.2113L7.82888 15.1384C7.7134 15.0648 7.58517 15.0253 7.45393 15.0209H7.25071C7.18022 15.0334 7.11123 15.0603 7.04824 15.1016L3.72617 17.1844C3.56194 17.2831 3.37597 17.3181 3.19374 17.2831C2.7498 17.1826 2.45359 16.6765 2.52633 16.1425L3.19374 11.7276C3.23798 11.4054 3.14875 11.0779 2.95452 10.8491L0.246625 7.70836C0.0201542 7.44544 -0.0585855 7.05061 0.044901 6.69436C0.145388 6.33901 0.401854 6.07967 0.711564 6.02135L4.43858 5.37436C4.72204 5.33936 4.97101 5.13297 5.09849 4.82787L6.74078 0.798782C6.77977 0.709047 6.83001 0.626491 6.89076 0.556498L6.95825 0.493684C6.99349 0.447022 7.03399 0.408436 7.07898 0.377029L7.16072 0.341135L7.2882 0.27832H7.60391C7.88588 0.313317 8.13409 0.51522 8.26383 0.816729L9.92786 4.82787C10.0478 5.12131 10.2811 5.32501 10.5503 5.37436L14.2773 6.02135C14.5922 6.07519 14.8555 6.33542 14.9597 6.69436C15.0579 7.05419 14.9732 7.44903 14.7422 7.70836L11.9376 10.885Z"
+                          fill="#FF69B4"
+                        />
+                        <path
+                          d="M28.9376 10.885C28.7434 11.1102 28.6541 11.4359 28.6984 11.7554L29.365 16.1704C29.4213 16.5445 29.2893 16.9232 29.0276 17.1395C28.7711 17.3638 28.4299 17.3907 28.1502 17.2113L24.8289 15.1384C24.7134 15.0648 24.5852 15.0253 24.4539 15.0209H24.2507C24.1802 15.0334 24.1112 15.0603 24.0482 15.1016L20.7262 17.1844C20.5619 17.2831 20.376 17.3181 20.1937 17.2831C19.7498 17.1826 19.4536 16.6765 19.5263 16.1425L20.1937 11.7276C20.238 11.4054 20.1487 11.0779 19.9545 10.8491L17.2466 7.70836C17.0202 7.44544 16.9414 7.05061 17.0449 6.69436C17.1454 6.33901 17.4019 6.07967 17.7116 6.02135L21.4386 5.37436C21.722 5.33936 21.971 5.13297 22.0985 4.82787L23.7408 0.798782C23.7798 0.709047 23.83 0.626491 23.8908 0.556498L23.9582 0.493684C23.9935 0.447022 24.034 0.408436 24.079 0.377029L24.1607 0.341135L24.2882 0.27832H24.6039C24.8859 0.313317 25.1341 0.51522 25.2638 0.816729L26.9279 4.82787C27.0478 5.12131 27.2811 5.32501 27.5503 5.37436L31.2773 6.02135C31.5922 6.07519 31.8555 6.33542 31.9597 6.69436C32.0579 7.05419 31.9732 7.44903 31.7422 7.70836L28.9376 10.885Z"
+                          fill="#FF69B4"
+                        />
+                        <path
+                          d="M45.9376 10.885C45.7434 11.1102 45.6541 11.4359 45.6984 11.7554L46.365 16.1704C46.4213 16.5445 46.2893 16.9232 46.0276 17.1395C45.7711 17.3638 45.4299 17.3907 45.1502 17.2113L41.8289 15.1384C41.7134 15.0648 41.5852 15.0253 41.4539 15.0209H41.2507C41.1802 15.0334 41.1112 15.0603 41.0482 15.1016L37.7262 17.1844C37.5619 17.2831 37.376 17.3181 37.1937 17.2831C36.7498 17.1826 36.4536 16.6765 36.5263 16.1425L37.1937 11.7276C37.238 11.4054 37.1487 11.0779 36.9545 10.8491L34.2466 7.70836C34.0202 7.44544 33.9414 7.05061 34.0449 6.69436C34.1454 6.33901 34.4019 6.07967 34.7116 6.02135L38.4386 5.37436C38.722 5.33936 38.971 5.13297 39.0985 4.82787L40.7408 0.798782C40.7798 0.709047 40.83 0.626491 40.8908 0.556498L40.9582 0.493684C40.9935 0.447022 41.034 0.408436 41.079 0.377029L41.1607 0.341135L41.2882 0.27832H41.6039C41.8859 0.313317 42.1341 0.51522 42.2638 0.816729L43.9279 4.82787C44.0478 5.12131 44.2811 5.32501 44.5503 5.37436L48.2773 6.02135C48.5922 6.07519 48.8555 6.33542 48.9597 6.69436C49.0579 7.05419 48.9732 7.44903 48.7422 7.70836L45.9376 10.885Z"
+                          fill="#FF69B4"
+                        />
+                        <path
+                          d="M62.9376 10.885C62.7434 11.1102 62.6541 11.4359 62.6984 11.7554L63.365 16.1704C63.4213 16.5445 63.2893 16.9232 63.0276 17.1395C62.7711 17.3638 62.4299 17.3907 62.1502 17.2113L58.8289 15.1384C58.7134 15.0648 58.5852 15.0253 58.4539 15.0209H58.2507C58.1802 15.0334 58.1112 15.0603 58.0482 15.1016L54.7262 17.1844C54.5619 17.2831 54.376 17.3181 54.1937 17.2831C53.7498 17.1826 53.4536 16.6765 53.5263 16.1425L54.1937 11.7276C54.238 11.4054 54.1487 11.0779 53.9545 10.8491L51.2466 7.70836C51.0202 7.44544 50.9414 7.05061 51.0449 6.69436C51.1454 6.33901 51.4019 6.07967 51.7116 6.02135L55.4386 5.37436C55.722 5.33936 55.971 5.13297 56.0985 4.82787L57.7408 0.798782C57.7798 0.709047 57.83 0.626491 57.8908 0.556498L57.9582 0.493684C57.9935 0.447022 58.034 0.408436 58.079 0.377029L58.1607 0.341135L58.2882 0.27832H58.6039C58.8859 0.313317 59.1341 0.51522 59.2638 0.816729L60.9279 4.82787C61.0478 5.12131 61.2811 5.32501 61.5503 5.37436L65.2773 6.02135C65.5922 6.07519 65.8555 6.33542 65.9597 6.69436C66.0579 7.05419 65.9732 7.44903 65.7422 7.70836L62.9376 10.885Z"
+                          fill="#FF69B4"
+                        />
+                        <path
+                          opacity="0.4"
+                          d="M79.9376 10.885C79.7434 11.1102 79.6541 11.4359 79.6984 11.7554L80.365 16.1704C80.4213 16.5445 80.2893 16.9232 80.0276 17.1395C79.7711 17.3638 79.4299 17.3907 79.1502 17.2113L75.8289 15.1384C75.7134 15.0648 75.5852 15.0253 75.4539 15.0209H75.2507C75.1802 15.0334 75.1112 15.0603 75.0482 15.1016L71.7262 17.1844C71.5619 17.2831 71.376 17.3181 71.1937 17.2831C70.7498 17.1826 70.4536 16.6765 70.5263 16.1425L71.1937 11.7276C71.238 11.4054 71.1487 11.0779 70.9545 10.8491L68.2466 7.70836C68.0202 7.44544 67.9414 7.05061 68.0449 6.69436C68.1454 6.33901 68.4019 6.07967 68.7116 6.02135L72.4386 5.37436C72.722 5.33936 72.971 5.13297 73.0985 4.82787L74.7408 0.798782C74.7798 0.709047 74.83 0.626491 74.8908 0.556498L74.9582 0.493684C74.9935 0.447022 75.034 0.408436 75.079 0.377029L75.1607 0.341135L75.2882 0.27832H75.6039C75.8859 0.313317 76.1341 0.51522 76.2638 0.816729L77.9279 4.82787C78.0478 5.12131 78.2811 5.32501 78.5503 5.37436L82.2773 6.02135C82.5922 6.07519 82.8555 6.33542 82.9597 6.69436C83.0579 7.05419 82.9732 7.44903 82.7422 7.70836L79.9376 10.885Z"
+                          fill="#FF69B4"
+                        />
+                      </svg>
+
+                      <p id="price">$87</p>
+                    </div>
+                  </div>
+                  <div class="iphoneContainer">
+                    <div class="iphoneImg">
+                      <img src="images/iphoneImg.jpeg" alt="" />
+                    </div>
+                    <div class="imgPrice">
+                      <p id="tittleName">iPhone 12</p>
+                      <svg
+                        width="83"
+                        height="18"
+                        viewBox="0 0 83 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.9376 11.3908C11.7434 11.6161 11.6541 11.9418 11.6984 12.2613L12.365 16.6762C12.4213 17.0504 12.2893 17.4291 12.0276 17.6453C11.7711 17.8697 11.4299 17.8966 11.1502 17.7171L7.82888 15.6443C7.7134 15.5707 7.58517 15.5312 7.45393 15.5267H7.25071C7.18022 15.5393 7.11123 15.5662 7.04824 15.6075L3.72617 17.6902C3.56194 17.7889 3.37597 17.8239 3.19374 17.7889C2.7498 17.6884 2.45359 17.1823 2.52633 16.6484L3.19374 12.2334C3.23798 11.9113 3.14875 11.5838 2.95452 11.3549L0.246625 8.21422C0.0201542 7.9513 -0.0585855 7.55646 0.044901 7.20022C0.145388 6.84487 0.401854 6.58553 0.711564 6.52721L4.43858 5.88022C4.72204 5.84522 4.97101 5.63883 5.09849 5.33373L6.74078 1.30464C6.77977 1.21491 6.83001 1.13235 6.89076 1.06236L6.95825 0.999543C6.99349 0.952881 7.03399 0.914295 7.07898 0.882888L7.16072 0.846994L7.2882 0.78418H7.60391C7.88588 0.819176 8.13409 1.02108 8.26383 1.32259L9.92786 5.33373C10.0478 5.62717 10.2811 5.83086 10.5503 5.88022L14.2773 6.52721C14.5922 6.58105 14.8555 6.84128 14.9597 7.20022C15.0579 7.56005 14.9732 7.95489 14.7422 8.21422L11.9376 11.3908Z"
+                          fill="#FF69B4"
+                        />
+                        <path
+                          d="M28.9376 11.3908C28.7434 11.6161 28.6541 11.9418 28.6984 12.2613L29.365 16.6762C29.4213 17.0504 29.2893 17.4291 29.0276 17.6453C28.7711 17.8697 28.4299 17.8966 28.1502 17.7171L24.8289 15.6443C24.7134 15.5707 24.5852 15.5312 24.4539 15.5267H24.2507C24.1802 15.5393 24.1112 15.5662 24.0482 15.6075L20.7262 17.6902C20.5619 17.7889 20.376 17.8239 20.1937 17.7889C19.7498 17.6884 19.4536 17.1823 19.5263 16.6484L20.1937 12.2334C20.238 11.9113 20.1487 11.5838 19.9545 11.3549L17.2466 8.21422C17.0202 7.9513 16.9414 7.55646 17.0449 7.20022C17.1454 6.84487 17.4019 6.58553 17.7116 6.52721L21.4386 5.88022C21.722 5.84522 21.971 5.63883 22.0985 5.33373L23.7408 1.30464C23.7798 1.21491 23.83 1.13235 23.8908 1.06236L23.9582 0.999543C23.9935 0.952881 24.034 0.914295 24.079 0.882888L24.1607 0.846994L24.2882 0.78418H24.6039C24.8859 0.819176 25.1341 1.02108 25.2638 1.32259L26.9279 5.33373C27.0478 5.62717 27.2811 5.83086 27.5503 5.88022L31.2773 6.52721C31.5922 6.58105 31.8555 6.84128 31.9597 7.20022C32.0579 7.56005 31.9732 7.95489 31.7422 8.21422L28.9376 11.3908Z"
+                          fill="#FF69B4"
+                        />
+                        <path
+                          d="M45.9376 11.3908C45.7434 11.6161 45.6541 11.9418 45.6984 12.2613L46.365 16.6762C46.4213 17.0504 46.2893 17.4291 46.0276 17.6453C45.7711 17.8697 45.4299 17.8966 45.1502 17.7171L41.8289 15.6443C41.7134 15.5707 41.5852 15.5312 41.4539 15.5267H41.2507C41.1802 15.5393 41.1112 15.5662 41.0482 15.6075L37.7262 17.6902C37.5619 17.7889 37.376 17.8239 37.1937 17.7889C36.7498 17.6884 36.4536 17.1823 36.5263 16.6484L37.1937 12.2334C37.238 11.9113 37.1487 11.5838 36.9545 11.3549L34.2466 8.21422C34.0202 7.9513 33.9414 7.55646 34.0449 7.20022C34.1454 6.84487 34.4019 6.58553 34.7116 6.52721L38.4386 5.88022C38.722 5.84522 38.971 5.63883 39.0985 5.33373L40.7408 1.30464C40.7798 1.21491 40.83 1.13235 40.8908 1.06236L40.9582 0.999543C40.9935 0.952881 41.034 0.914295 41.079 0.882888L41.1607 0.846994L41.2882 0.78418H41.6039C41.8859 0.819176 42.1341 1.02108 42.2638 1.32259L43.9279 5.33373C44.0478 5.62717 44.2811 5.83086 44.5503 5.88022L48.2773 6.52721C48.5922 6.58105 48.8555 6.84128 48.9597 7.20022C49.0579 7.56005 48.9732 7.95489 48.7422 8.21422L45.9376 11.3908Z"
+                          fill="#FF69B4"
+                        />
+                        <path
+                          opacity="0.4"
+                          d="M62.9376 11.3908C62.7434 11.6161 62.6541 11.9418 62.6984 12.2613L63.365 16.6762C63.4213 17.0504 63.2893 17.4291 63.0276 17.6453C62.7711 17.8697 62.4299 17.8966 62.1502 17.7171L58.8289 15.6443C58.7134 15.5707 58.5852 15.5312 58.4539 15.5267H58.2507C58.1802 15.5393 58.1112 15.5662 58.0482 15.6075L54.7262 17.6902C54.5619 17.7889 54.376 17.8239 54.1937 17.7889C53.7498 17.6884 53.4536 17.1823 53.5263 16.6484L54.1937 12.2334C54.238 11.9113 54.1487 11.5838 53.9545 11.3549L51.2466 8.21422C51.0202 7.9513 50.9414 7.55646 51.0449 7.20022C51.1454 6.84487 51.4019 6.58553 51.7116 6.52721L55.4386 5.88022C55.722 5.84522 55.971 5.63883 56.0985 5.33373L57.7408 1.30464C57.7798 1.21491 57.83 1.13235 57.8908 1.06236L57.9582 0.999543C57.9935 0.952881 58.034 0.914295 58.079 0.882888L58.1607 0.846994L58.2882 0.78418H58.6039C58.8859 0.819176 59.1341 1.02108 59.2638 1.32259L60.9279 5.33373C61.0478 5.62717 61.2811 5.83086 61.5503 5.88022L65.2773 6.52721C65.5922 6.58105 65.8555 6.84128 65.9597 7.20022C66.0579 7.56005 65.9732 7.95489 65.7422 8.21422L62.9376 11.3908Z"
+                          fill="#FF69B4"
+                        />
+                        <path
+                          opacity="0.4"
+                          d="M79.9376 11.3908C79.7434 11.6161 79.6541 11.9418 79.6984 12.2613L80.365 16.6762C80.4213 17.0504 80.2893 17.4291 80.0276 17.6453C79.7711 17.8697 79.4299 17.8966 79.1502 17.7171L75.8289 15.6443C75.7134 15.5707 75.5852 15.5312 75.4539 15.5267H75.2507C75.1802 15.5393 75.1112 15.5662 75.0482 15.6075L71.7262 17.6902C71.5619 17.7889 71.376 17.8239 71.1937 17.7889C70.7498 17.6884 70.4536 17.1823 70.5263 16.6484L71.1937 12.2334C71.238 11.9113 71.1487 11.5838 70.9545 11.3549L68.2466 8.21422C68.0202 7.9513 67.9414 7.55646 68.0449 7.20022C68.1454 6.84487 68.4019 6.58553 68.7116 6.52721L72.4386 5.88022C72.722 5.84522 72.971 5.63883 73.0985 5.33373L74.7408 1.30464C74.7798 1.21491 74.83 1.13235 74.8908 1.06236L74.9582 0.999543C74.9935 0.952881 75.034 0.914295 75.079 0.882888L75.1607 0.846994L75.2882 0.78418H75.6039C75.8859 0.819176 76.1341 1.02108 76.2638 1.32259L77.9279 5.33373C78.0478 5.62717 78.2811 5.83086 78.5503 5.88022L82.2773 6.52721C82.5922 6.58105 82.8555 6.84128 82.9597 7.20022C83.0579 7.56005 82.9732 7.95489 82.7422 8.21422L79.9376 11.3908Z"
+                          fill="#FF69B4"
+                        />
+                      </svg>
+
+                      <p id="price">$987</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="analyticsExpContainer">
             <h1>Analytics</h1>
-         </div>
-         <div id="invoiceExpContainer">
-            <h1>Invoice</h1>
-         </div>
-         <div id="scheduleExpContainer">
+          </div>
+          <div id="invoiceExpContainer">
+            <div id="header">
+              <h1>Invoice</h1>
+              <div class="searchBox">
+                <input type="text" placeholder="search" />
+                <span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g opacity="0.6">
+                      <path
+                        d="M6.14286 11.2857C8.98318 11.2857 11.2857 8.98318 11.2857 6.14286C11.2857 3.30254 8.98318 1 6.14286 1C3.30254 1 1 3.30254 1 6.14286C1 8.98318 3.30254 11.2857 6.14286 11.2857Z"
+                        stroke="#06152B"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.0001 12.9992L10.4287 10.4277"
+                        stroke="#06152B"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <button><span>+</span> Add Item</button>
+            </div>
+            <div class="listContainer">
+              <div class="tittleContainer">
+                <div id="checkboxTittle">
+                  <input type="checkbox" />
+                </div>
+                <div class="invoiceIdbutton">
+                  <button id="btn">
+                    Invoice Id
+                    <span>
+                      <svg
+                        width="6"
+                        height="5"
+                        viewBox="0 0 6 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                          fill="#06152B"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="namebutton">
+                  <button id="btn">
+                    Name
+                    <span>
+                      <svg
+                        width="6"
+                        height="5"
+                        viewBox="0 0 6 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                          fill="#06152B"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="emailbutton">
+                  <button id="btn">
+                    Email
+                    <span>
+                      <svg
+                        width="6"
+                        height="5"
+                        viewBox="0 0 6 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                          fill="#06152B"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="datebutton">
+                  <button id="btn">
+                    Date
+                    <span>
+                      <svg
+                        width="6"
+                        height="5"
+                        viewBox="0 0 6 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                          fill="#06152B"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="statusbutton">
+                  <button id="btn">
+                    Status
+                    <span>
+                      <svg
+                        width="6"
+                        height="5"
+                        viewBox="0 0 6 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                          fill="#06152B"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="deletebutton">
+                  <button id="btn">
+                    <span>
+                      <svg
+                        width="18"
+                        height="20"
+                        viewBox="0 0 18 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M17.2871 3.24297C17.6761 3.24297 18 3.56596 18 3.97696V4.35696C18 4.75795 17.6761 5.09095 17.2871 5.09095H0.713853C0.32386 5.09095 0 4.75795 0 4.35696V3.97696C0 3.56596 0.32386 3.24297 0.713853 3.24297H3.62957C4.22185 3.24297 4.7373 2.82197 4.87054 2.22798L5.02323 1.54598C5.26054 0.616994 6.0415 0 6.93527 0H11.0647C11.9488 0 12.7385 0.616994 12.967 1.49699L13.1304 2.22698C13.2627 2.82197 13.7781 3.24297 14.3714 3.24297H17.2871ZM15.8058 17.134C16.1102 14.2971 16.6432 7.55712 16.6432 7.48913C16.6626 7.28313 16.5955 7.08813 16.4623 6.93113C16.3193 6.78413 16.1384 6.69713 15.9391 6.69713H2.06852C1.86818 6.69713 1.67756 6.78413 1.54529 6.93113C1.41108 7.08813 1.34494 7.28313 1.35467 7.48913C1.35646 7.50162 1.37558 7.73903 1.40755 8.13594C1.54958 9.89917 1.94517 14.8102 2.20079 17.134C2.38168 18.846 3.50498 19.922 5.13206 19.961C6.38763 19.99 7.68112 20 9.00379 20C10.2496 20 11.5149 19.99 12.8094 19.961C14.4929 19.932 15.6152 18.875 15.8058 17.134Z"
+                          fill="#06152B"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div id="listContainer">
+                <div id="employeeList"></div>
+              </div>
+            </div>
+          </div>
+          <div id="scheduleExpContainer">
             <h1>Schedule</h1>
-         </div>
-         <div id="calenderExpContainer">
+          </div>
+          <div id="calenderExpContainer">
             <h1>Calender</h1>
-         </div>
-         <div id="messagesExpContainer">
+          </div>
+          <div id="messagesExpContainer">
             <h1>Messages</h1>
-         </div>
-         <div id="notificationExpContainer">
+          </div>
+          <div id="notificationExpContainer">
             <h1>Notification</h1>
-         </div>
-         <div id="settingsExpContainer">
+          </div>
+          <div id="settingsExpContainer">
             <h1>Settings</h1>
-         </div>
-       </div>
-      
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-</body>
+  </body>
 </html>
